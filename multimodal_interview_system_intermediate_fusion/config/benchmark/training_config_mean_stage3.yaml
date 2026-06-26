@@ -1,0 +1,100 @@
+# Training Configuration - Stage 3: Joint Fine-tuning (Single Unified Model)
+# Re-balances personality and deception after specialized stages
+
+# Dataset paths
+dataset:
+  mdpe_path: "D:/Grad/Datasets/MDPE-Dataset"
+  train_split: 0.7
+  val_split: 0.15
+  test_split: 0.15
+  shuffle: true
+  seed: 42
+
+# Data augmentation
+augmentation:
+  video:
+    enabled: true
+    horizontal_flip: 0.5
+    brightness_range: [0.8, 1.2]
+    contrast_range: [0.8, 1.2]
+    
+  audio:
+    enabled: true
+    noise_factor: 0.01
+    time_shift: 0.1
+    pitch_shift: 2
+    
+  text:
+    enabled: true
+    synonym_replacement: 0.1
+    random_deletion: 0.05
+
+# Optimizer settings - Very conservative LR for final joint alignment
+optimizer:
+  type: "adamw"
+  lr: 2e-5  
+  weight_decay: 2e-3
+  betas: [0.9, 0.999]
+  eps: 1e-8
+
+# Scheduler settings
+scheduler:
+  type: "reduce_on_plateau"
+  factor: 0.5
+  patience: 3
+  min_lr: 1e-7
+
+# Training settings
+training:
+  batch_size: 16
+  num_epochs: 120             # Increased to run after Stage 2's epochs
+  num_workers: 0
+  pin_memory: true
+  persistent_workers: false
+  prefetch_factor: 2
+  gradient_clip: 0.5          # Tighter clipping for stability
+  early_stopping_patience: 10
+  warmup_epochs: 0
+  compile_model: false
+  
+# Validation settings
+validation:
+  frequency: 1
+  save_best: true
+  metric: "val_loss"          # Overall loss is best for joint balancing
+  
+# Checkpointing
+checkpoint:
+  save_dir: "checkpoints/benchmark/mean/stage3"
+  save_frequency: 5
+  keep_last_n: 3
+  
+# Logging
+logging:
+  log_dir: "logs/benchmark/mean/stage3"
+  batch_log_interval: 1
+  tensorboard: false
+  wandb: false
+  
+# Device
+device: "cuda"
+mixed_precision: true
+
+# Data loading controls
+data_loading:
+  use_face_detection: true
+
+# Loss weights - BALANCED FOR ONE FINAL MODEL
+loss_weights:
+  personality_mse: 1.0  # Bring personality back to full focus
+  personality_ccc: 1.0  # CRITICAL: Fixes negative correlation
+  deception_ce: 1.0     # Balanced with personality
+  cultural_bias: 0.1
+
+# Ensure ALL heads are trainable
+freeze_shared_layers_with_deception: false
+
+# Stage 3 Joint Fine-tuning settings
+loss:
+  use_focal_loss: true  # Focal loss helps with hard samples in both tasks
+  max_class_weight_ratio: 3.0

@@ -1,0 +1,135 @@
+# Model Configuration for Multimodal Interview Analysis System
+# Architecture: INTERMEDIATE FUSION
+# Cross-modal attention across modality feature streams before shared prediction head
+
+# Visual Stream Configuration
+visual:
+  expr3dnet:
+    input_channels: 3
+    num_frames: 10  # Reduced from 30 for faster loading (10 seconds at 1 fps)
+    spatial_size: 224
+    hidden_dim: 512
+    num_layers: 4
+    dropout: 0.3
+    
+  vit_encoder:
+    model_name: "google/vit-base-patch16-224"  # Base instead of Large - 3x faster
+    pretrained: true
+    output_dim: 768
+    freeze_backbone: true  # Frozen to prevent overfitting and speed up training
+  
+  # Visual modality fusion (combine Expr3DNet + ViT)
+  fusion_dim: 768
+  
+  # Visual prediction head
+  prediction_hidden_dim: 256
+  prediction_dropout: 0.2
+
+# Audio Stream Configuration
+audio:
+  acoustic_feature_net:
+    mfcc_features: 40
+    num_frames: 300  # 30 seconds at 10 fps
+    hidden_dim: 256
+    num_cnn_layers: 3
+    num_gru_layers: 2
+    gru_hidden: 128
+    dropout: 0.3
+    
+  wavlm_encoder:
+    model_name: "microsoft/wavlm-base"
+    pretrained: true
+    output_dim: 768
+    freeze_backbone: true  # Frozen to prevent overfitting and speed up training
+  
+  # Audio modality fusion (combine AcousticNet + WavLM)
+  fusion_dim: 768  # Matches Visual (768) and Text (768)
+  
+  # Audio prediction head
+  prediction_hidden_dim: 256
+  prediction_dropout: 0.2
+
+# Text Stream Configuration
+text:
+  text_trait_net:
+    vocab_size: 50000
+    embedding_dim: 300
+    hidden_dim: 256
+    num_layers: 2
+    attention_dim: 128
+    dropout: 0.3
+    max_seq_length: 512
+    
+  sentence_bert:
+    model_name: "sentence-transformers/paraphrase-multilingual-mpnet-base-v2"
+    output_dim: 768
+    freeze_backbone: true  # Frozen to prevent overfitting and speed up training
+  
+  # Text modality fusion (TextTraitNet + SentenceBERT)
+  fusion_dim: 768
+  
+  # Text prediction head
+  prediction_hidden_dim: 256
+  prediction_dropout: 0.2
+
+# Fusion Configuration - INTERMEDIATE FUSION
+fusion:
+  # Intermediate fusion: cross-modal attention across modality tokens
+  intermediate_fusion:
+    fusion_dim: 512          # Shared projection dim (must be divisible by num_heads)
+    num_heads: 8             # Multi-head attention heads across the 3 modality tokens
+    num_layers: 2            # Number of Transformer encoder layers
+    dropout: 0.3             # Dropout inside Transformer and post-fusion FF blocks
+    use_gating: true         # Apply per-modality sigmoid gate after attention
+    aggregation: "mean"      # Aggregation method: 'mean', 'concat', or 'weighted'
+
+  # Cultural adaptation (applied to final predictions)
+  use_culture_adapt: true
+  culture_adapt_net:
+    input_dim: 5  # Applied to trait predictions (5 traits)
+    hidden_dim: 256
+    num_cultural_groups: 7  # MDPE (0-4) + SEUMLD (5) + Real-life (6) = 7 groups total
+    bias_correction_dim: 128
+    dropout: 0.2
+
+# Prediction Configuration
+# Note: In late fusion, each modality has its own prediction head
+# This section is for legacy compatibility
+# Prediction Configuration
+prediction:
+  hidden_dim: 256
+  dropout: 0.2
+  num_traits: 5  # OCEAN
+  use_confidence: true
+
+# Training Configuration
+training:
+  batch_size: 16
+  num_epochs: 100
+  learning_rate: 1e-4
+  weight_decay: 1e-5
+  warmup_epochs: 5
+  early_stopping_patience: 10
+  gradient_clip: 1.0
+  
+# Loss weights
+loss_weights:
+  personality_mse: 1.0  # Weight for personality prediction (uses MAE)
+  deception_ce: 0.6  # Weight for deception detection
+  cultural_bias: 0.2  # Weight for cultural bias reduction
+
+# Data Configuration
+data:
+  video:
+    fps: 1
+    frame_size: 224
+    num_frames: 10  # Reduced from 30 for faster loading
+    
+  audio:
+    sample_rate: 16000
+    mfcc_coefficients: 40
+    hop_length: 160
+    
+  text:
+    max_length: 512
+    tokenizer: "bert-base-uncased"

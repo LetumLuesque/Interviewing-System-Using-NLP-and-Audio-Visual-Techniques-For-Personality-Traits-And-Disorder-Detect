@@ -1,0 +1,387 @@
+
+import argparse
+import os
+import sys
+
+
+import yaml
+# pyrefly: ignore [missing-import]
+import torch
+from pathlib import Path
+
+from utils.helpers import load_config, set_seed, get_device, create_dir_if_not_exists
+from utils.logger import setup_logger, save_checkpoint, log_training_metrics, load_checkpoint
+from data.loaders.mdpe_loader import create_dataloader
+from data.loaders.combined_loader import create_combined_dataloader
+from data.processors.video_processor import VideoProcessor
+from data.processors.audio_processor import AudioProcessor
+from data.processors.text_processor import TextProcessor
+from data.augmentation.multimodal_aug import MultimodalAugmentation
+from models.multimodal_model import MultimodalInterviewModel
+from training.trainer import Trainer
+
+
+def main():
+    parser = argparse.ArgumentParser(description='Train Multimodal Interview Analysis Model')
+    parser.add_argument('--config', type=str, default='config/training_config.yaml',
+                       help='Path to training config file')
+    parser.add_argument('--model_config', type=str, default='config/model_config.yaml',
+                       help='Path to model config file')
+    parser.add_argument('--data_dir', type=str, required=True,
+                       help='Path to MDPE dataset directory')
+    parser.add_argument('--seumld_data_dir', type=str, default=r'D:\Grad\Datasets\SEUMLD\SEUMLD',
+                       help='Path to SEUMLD dataset')
+    parser.add_argument('--use_combined', action='store_true',
+                       help='Use combined dataset (MDPE + SEUMLD)')
+    parser.add_argument('--seumld_fold', type=int, default=0,
+                       help='SEUMLD cross-validation fold (0-4)')
+    parser.add_argument('--seumld_fine_grained', action='store_true', default=True,
+                       help='Use fine-grained (question-level) labels for SEUMLD')
+    parser.add_argument('--seed', type=int, default=42,
+                       help='Random seed')
+    parser.add_argument('--resume', type=str, default=None,
+                       help='Path to checkpoint to resume from')
+    parser.add_argument('--stage', type=int, default=None,
+                       help='Training stage number (1, 2, or 3) for logging purposes')
+    parser.add_argument('--features_dir', type=str, default='features',
+                       help='Path to pre-extracted features directory')
+    parser.add_argument('--no_preprocessed', action='store_true',
+                       help='Do not use preprocessed data (force on-the-fly processing from original files)')
+    
+    parser.add_argument('--freeze_backbones', action='store_true',
+                       help='Freeze feature extractor backbones')
+    parser.add_argument('--fusion_method', type=str, default=None, choices=['weighted', 'mean', 'concat'],
+                       help='Early fusion method to use (weighted, mean, concat)')
+    
+    args = parser.parse_args()
+    
+    # Set seed
+    set_seed(args.seed)
+    
+    # Load configurations
+    train_config = load_config(args.config)
+    model_config = load_config(args.model_config)
+    
+    # Inject command line args into config
+    train_config['freeze_backbones'] = args.freeze_backbones
+    
+    if args.fusion_method:
+        if 'fusion' not in model_config:
+            model_config['fusion'] = {}
+        if 'early_fusion' not in model_config['fusion']:
+            model_config['fusion']['early_fusion'] = {}
+        model_config['fusion']['early_fusion']['fusion_method'] = args.fusion_method
+
+    # Use stage-specific checkpoint directory to avoid cross-stage checkpoint collisions.
+    if args.stage is not None:
+        checkpoint_cfg = train_config.setdefault('checkpoint', {})
+        base_checkpoint_dir = checkpoint_cfg.get('save_dir', 'checkpoints')
+        
+        # Include fusion method in path if provided
+        fusion_suffix = args.fusion_method if args.fusion_method else "weighted"
+        stage_checkpoint_dir = Path(base_checkpoint_dir) / fusion_suffix / f"stage{args.stage}"
+        
+        checkpoint_cfg['save_dir'] = str(stage_checkpoint_dir)
+        create_dir_if_not_exists(str(stage_checkpoint_dir))
+    
+    # Setup logging
+    log_dir = train_config.get('logging', {}).get('log_dir', 'logs')
+    create_dir_if_not_exists(log_dir)
+    logger = setup_logger('training', log_dir)
+    
+    logger.info("=" * 80)
+    logger.info("Multimodal Interview Analysis System - Training")
+    if args.stage:
+        logger.info(f"STAGE {args.stage} TRAINING")
+    logger.info("=" * 80)
+    logger.info(f"Training config: {args.config}")
+    logger.info(f"Model config: {args.model_config}")
+    logger.info(f"Data directory: {args.data_dir}")
+    
+    # Get device (respect config, fallback to auto-detect)
+    device_config = train_config.get('device', 'auto')
+    if device_config == 'auto' or device_config is None:
+        device = get_device()
+    elif device_config.lower() == 'cuda':
+        device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    else:
+        device = torch.device('cpu')
+    logger.info(f"Using device: {device}")
+    
+    # Initialize processors
+    data_config = model_config.get('data', {})
+    video_config = data_config.get('video', {})
+    audio_config = data_config.get('audio', {})
+    text_config = data_config.get('text', {})
+    data_loading_cfg = train_config.get('data_loading', {})
+    use_face_detection = data_loading_cfg.get('use_face_detection', True)
+    
+    video_processor = VideoProcessor(
+        fps=video_config.get('fps', 1),
+        frame_size=video_config.get('frame_size', 224),
+        use_face_detection=use_face_detection
+    )
+    
+    audio_processor = AudioProcessor(
+        sample_rate=audio_config.get('sample_rate', 16000),
+        mfcc_coefficients=audio_config.get('mfcc_coefficients', 40),
+        hop_length=audio_config.get('hop_length', 160)
+    )
+    
+    text_processor = TextProcessor(
+        tokenizer_name=text_config.get('tokenizer', 'bert-base-uncased'),
+        max_length=text_config.get('max_length', 512)
+    )
+    
+    # Data augmentation
+    aug_config = train_config.get('augmentation', {})
+    augmentation = MultimodalAugmentation(
+        video_aug=aug_config.get('video', {}).get('enabled', True),
+        audio_aug=aug_config.get('audio', {}).get('enabled', True),
+        text_aug=aug_config.get('text', {}).get('enabled', True)
+    )
+    
+    # Create data loaders
+    dataset_config = train_config.get('dataset', {})
+    
+    # Use combined dataset if requested
+    if args.use_combined and args.seumld_data_dir:
+        datasets_used = ["MDPE"]
+        if args.seumld_data_dir:
+            datasets_used.append(f"SEUMLD (fold {args.seumld_fold})")
+        
+        if args.stage:
+            logger.info(f"STAGE {args.stage}: Using combined dataset: {' + '.join(datasets_used)}")
+        else:
+            logger.info(f"Using combined dataset: {' + '.join(datasets_used)}")
+        
+        # Pass None for processors if using multiprocessing (they will be created in each worker)
+        # Otherwise, pass the main process instances
+        use_multiprocessing = train_config.get('training', {}).get('num_workers', 0) > 0
+        
+        training_cfg = train_config.get('training', {})
+        persistent_workers = training_cfg.get('persistent_workers', False) and training_cfg.get('num_workers', 0) > 0
+        
+        # Optional corr-recovery optimization: when deception is frozen, you may choose to
+        # prioritize MDPE via dataset_weights. Keep disabled by default for speed/stability.
+        dataset_weights = None
+        loss_weights = train_config.get('loss_weights', {})
+        mdpe_priority_weight = float(
+            train_config.get('data_loading', {}).get('mdpe_priority_weight_when_deception_frozen', 1.0)
+        )
+        if (
+            loss_weights.get('deception_ce', 1.0) < 1e-6
+            and loss_weights.get('personality_mse', 0.0) > 1e-6
+            and mdpe_priority_weight > 1.0
+        ):
+             logger.info(
+                 f"PHASE 3 DETECTED: Prioritizing Personality data (MDPE) with {mdpe_priority_weight:.1f}x weight"
+             )
+             dataset_weights = {0: mdpe_priority_weight}  # MDPE is first, SEUMLD is second
+        
+        train_loader = create_combined_dataloader(
+            mdpe_data_dir=args.data_dir,
+            seumld_data_dir=args.seumld_data_dir,
+            split='train',
+            batch_size=training_cfg.get('batch_size', 16),
+            shuffle=True,
+            num_workers=training_cfg.get('num_workers', 0),
+            video_processor=None if use_multiprocessing else video_processor,
+            audio_processor=None if use_multiprocessing else audio_processor,
+            text_processor=None if use_multiprocessing else text_processor,
+            transform=augmentation,
+            seumld_fold=args.seumld_fold,
+            seumld_fine_grained=args.seumld_fine_grained,
+            persistent_workers=persistent_workers,
+            balance_classes=True,
+            dataset_weights=dataset_weights,  # Pass the Phase 3 weight boost
+            features_dir=args.features_dir,
+            use_preprocessed=not args.no_preprocessed,
+            use_face_detection=use_face_detection
+        )
+        
+        val_loader = create_combined_dataloader(
+            mdpe_data_dir=args.data_dir,
+            seumld_data_dir=args.seumld_data_dir,
+            split='val',
+            batch_size=training_cfg.get('batch_size', 16),
+            shuffle=False,
+            num_workers=training_cfg.get('num_workers', 0),
+            video_processor=None if use_multiprocessing else video_processor,
+            audio_processor=None if use_multiprocessing else audio_processor,
+            text_processor=None if use_multiprocessing else text_processor,
+            transform=None,
+            seumld_fold=args.seumld_fold,
+            seumld_fine_grained=args.seumld_fine_grained,
+            persistent_workers=persistent_workers,
+            balance_classes=False,  # No balancing for validation - want real metrics
+            features_dir=args.features_dir,
+            use_preprocessed=not args.no_preprocessed,
+            use_face_detection=use_face_detection
+        )
+    else:
+        logger.info("Using MDPE dataset only")
+        training_cfg = train_config.get('training', {})
+        
+        # Use multiprocessing logic: pass None for processors if using workers
+        # This forces the Dataset to create fresh pickle-safe processors in each worker
+        use_multiprocessing = training_cfg.get('num_workers', 0) > 0
+        
+        train_loader = create_dataloader(
+            data_dir=args.data_dir,
+            split='train',
+            batch_size=training_cfg.get('batch_size', 16),
+            shuffle=True,
+            num_workers=training_cfg.get('num_workers', 0),
+            balance_classes=training_cfg.get('balance_classes', True),
+            use_face_detection=use_face_detection,
+            video_processor=None if use_multiprocessing else video_processor,
+            audio_processor=None if use_multiprocessing else audio_processor,
+            text_processor=None if use_multiprocessing else text_processor,
+            transform=augmentation,
+            features_dir=args.features_dir
+        )
+        
+        val_loader = create_dataloader(
+            data_dir=args.data_dir,
+            split='val',
+            batch_size=training_cfg.get('batch_size', 16),
+            shuffle=False,
+            num_workers=training_cfg.get('num_workers', 0),
+            balance_classes=False,
+            use_face_detection=use_face_detection,
+            video_processor=None if use_multiprocessing else video_processor,
+            audio_processor=None if use_multiprocessing else audio_processor,
+            text_processor=None if use_multiprocessing else text_processor,
+            transform=None,
+            features_dir=args.features_dir
+        )
+    
+    logger.info(f"Train samples: {len(train_loader.dataset)}")
+    logger.info(f"Val samples: {len(val_loader.dataset)}")
+    
+    # Initialize model
+    model = MultimodalInterviewModel(model_config)
+    
+    # FREEZE BACKBONES STRATEGY
+    if args.freeze_backbones:
+        logger.info("STRATEGY: Freezing Backbones for Fine-Tuning. Only Heads/Fusion trainable.")
+        modules_to_freeze = [
+            model.expr3dnet, model.vit_encoder,
+            model.acoustic_net, model.wavlm_encoder,
+            model.text_trait_net
+        ]
+        count = 0
+        for module in modules_to_freeze:
+            for param in module.parameters():
+                param.requires_grad = False
+                count += 1
+        logger.info(f"Froze {count} parameters.")
+    model.to(device)
+    
+    # Compile model for faster training (PyTorch 2.0+)
+    compile_model = train_config.get('training', {}).get('compile_model', False)
+    if compile_model and hasattr(torch, 'compile'):
+        try:
+            logger.info("Compiling model for faster training (PyTorch 2.0+)...")
+            model = torch.compile(model, mode='reduce-overhead')
+            logger.info("Model compiled successfully!")
+        except Exception as e:
+            logger.warning(f"Model compilation failed: {e}. Continuing without compilation.")
+    
+    # Count parameters
+    total_params = sum(p.numel() for p in model.parameters())
+    trainable_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
+    logger.info(f"Total parameters: {total_params:,}")
+    logger.info(f"Trainable parameters: {trainable_params:,}")
+    
+    # Create trainer - merge model_config training settings into train_config for early stopping
+    # Early stopping patience is in model_config, but trainer expects it in config['training']
+    if 'early_stopping_patience' not in train_config.get('training', {}):
+        model_training_config = model_config.get('training', {})
+        if 'early_stopping_patience' in model_training_config:
+            if 'training' not in train_config:
+                train_config['training'] = {}
+            train_config['training']['early_stopping_patience'] = model_training_config['early_stopping_patience']
+    
+    # Create trainer
+    trainer = Trainer(
+        model=model,
+        train_loader=train_loader,
+        val_loader=val_loader,
+        config=train_config,
+        device=device,
+        logger=logger
+    )
+    
+    # Resume from checkpoint if provided
+    if args.resume:
+        # Check if we are freezing heads (Stage 2b or Phase 3), in which case we should NOT load optimizer state
+        # because the parameter groups will mismatch (some are now frozen/filtered out)
+        freeze_personality = train_config.get('loss_weights', {}).get('personality_mse', 1.0) < 1e-6
+        freeze_deception = train_config.get('loss_weights', {}).get('deception_ce', 1.0) < 1e-6
+        
+        optimizer_to_load = trainer.optimizer
+        scheduler_to_load = trainer.scheduler
+        
+        if freeze_personality or freeze_deception:
+            logger.info("Freezing prediction heads detected: Skipping optimizer/scheduler state load to allow fresh start.")
+            optimizer_to_load = None
+            scheduler_to_load = None
+            
+        resumed_epoch, resumed_loss = load_checkpoint(args.resume, model, optimizer_to_load, scheduler_to_load)
+        logger.info(f"Resumed from checkpoint: {args.resume} (epoch {resumed_epoch}, loss {resumed_loss})")
+        trainer.start_epoch = resumed_epoch + 1
+
+        # For stage transitions, reset "best model" tracking so Stage 2+ can select
+        # best checkpoints by the current stage metric instead of inheriting Stage 1 state.
+        reset_best_tracking = args.stage is not None and args.stage >= 2
+        if reset_best_tracking:
+            trainer.best_epoch = 0
+            trainer.best_val_loss = float('inf')
+            trainer.best_metric_value = float('-inf') if trainer.maximize_metric else float('inf')
+            trainer.early_stopping_counter = 0
+            trainer.start_epoch = 1  # CRITICAL: Reset epoch counter for new stage
+            logger.info(
+                f"Reset best-model tracking and epoch counter for stage {args.stage} "
+                f"(selection metric: {trainer.selection_metric})"
+            )
+        else:
+            trainer.best_epoch = resumed_epoch
+            trainer.best_val_loss = resumed_loss
+            if trainer.selection_metric == 'loss':
+                trainer.best_metric_value = resumed_loss
+            trainer.early_stopping_counter = 0
+            logger.info(
+                f"Restored best model state: epoch {resumed_epoch}, "
+                f"val_loss {resumed_loss:.4f}"
+            )
+    
+    # Train
+    trainer.train()
+    
+    logger.info("Training completed!")
+
+
+if __name__ == '__main__':
+    main()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

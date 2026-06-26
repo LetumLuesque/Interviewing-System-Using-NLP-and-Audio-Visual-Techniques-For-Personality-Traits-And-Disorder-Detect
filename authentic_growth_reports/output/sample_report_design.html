@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interview Coaching Report — Sarah Mitchell</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── Reset & Tokens ──────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:          #F8F6F1;
+      --surface:     #FFFFFF;
+      --border:      #E8E2D9;
+      --gold:        #C9A84C;
+      --gold-light:  #F5EDD6;
+      --navy:        #1B2A4A;
+      --navy-mid:    #2D4070;
+      --body-text:   #2D3748;
+      --muted:       #6B7280;
+      --green:       #2E7D62;
+      --green-bg:    #EBF7F3;
+      --red:         #A63228;
+      --red-bg:      #FBEAE9;
+      --teal:        #2A7F8F;
+      --teal-bg:     #EAF5F7;
+      --row-alt:     #FAF8F4;
+    }
+
+    html { font-size: 16px; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--body-text);
+      line-height: 1.75;
+      padding-bottom: 80px;
+    }
+
+    /* ── Cover Band ──────────────────────────────────── */
+    .cover {
+      background: var(--navy);
+      color: #fff;
+      padding: 48px 60px 44px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+    .cover-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .cover h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2.6rem;
+      font-weight: 400;
+      line-height: 1.2;
+      color: #fff;
+      max-width: 520px;
+    }
+    .cover-meta {
+      text-align: right;
+      color: rgba(255,255,255,0.65);
+      font-size: 0.88rem;
+      line-height: 2;
+    }
+    .cover-meta strong { color: #fff; font-weight: 500; }
+
+    /* ── Gold Rule ───────────────────────────────────── */
+    .gold-rule {
+      height: 4px;
+      background: linear-gradient(90deg, var(--gold), #E8C97A, var(--gold));
+    }
+
+    /* ── Page Body ───────────────────────────────────── */
+    .page { max-width: 900px; margin: 0 auto; padding: 0 32px; }
+
+    /* ── Section ─────────────────────────────────────── */
+    .section { margin-top: 56px; }
+    .section-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .section h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.75rem;
+      font-weight: 400;
+      color: var(--navy);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 12px;
+      margin-bottom: 28px;
+    }
+
+    /* ── Score Cards Row ─────────────────────────────── */
+    .score-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    .score-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-top: 4px solid var(--gold);
+      border-radius: 8px;
+      padding: 20px 22px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .score-card .sc-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+    .score-card .sc-value {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2rem;
+      color: var(--navy);
+      line-height: 1;
+    }
+    .score-card .sc-status {
+      margin-top: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    .status-good  { color: var(--green); }
+    .status-warn  { color: #D97706; }
+    .status-risk  { color: var(--red); }
+
+    /* ── Info Card (general) ─────────────────────────── */
+    .info-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 5px solid var(--gold);
+      border-radius: 8px;
+      padding: 24px 28px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      margin-bottom: 20px;
+    }
+    .info-card h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.1rem;
+      color: var(--navy);
+      margin-bottom: 14px;
+    }
+    .info-card ul { list-style: none; padding: 0; }
+    .info-card ul li {
+      padding: 7px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.95rem;
+      display: flex;
+      gap: 10px;
+    }
+    .info-card ul li:last-child { border-bottom: none; }
+    .info-card ul li .li-label {
+      font-weight: 600;
+      color: var(--navy-mid);
+      min-width: 220px;
+      flex-shrink: 0;
+    }
+
+    /* ── Observation Grid ────────────────────────────── */
+    .obs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .obs-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .obs-card .obs-type {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .obs-card h4 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1rem;
+      color: var(--navy);
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    .obs-item {
+      margin-bottom: 10px;
+      font-size: 0.9rem;
+    }
+    .obs-item .obs-key {
+      font-weight: 600;
+      color: var(--muted);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 2px;
+    }
+    .obs-item .obs-val { color: var(--body-text); }
+
+    /* ── Table ───────────────────────────────────────── */
+    .styled-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      font-size: 0.93rem;
+    }
+    .styled-table thead {
+      background: var(--navy);
+      color: #fff;
+    }
+    .styled-table thead th {
+      padding: 14px 18px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.82rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .styled-table tbody tr:nth-child(odd)  { background: var(--surface); }
+    .styled-table tbody tr:nth-child(even) { background: var(--row-alt); }
+    .styled-table tbody tr:hover { background: var(--gold-light); transition: background 0.15s; }
+    .styled-table tbody td {
+      padding: 13px 18px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .styled-table tbody tr:last-child td { border-bottom: none; }
+
+    /* ── Progress Bar ────────────────────────────────── */
+    .trait-score { font-weight: 700; color: var(--navy); }
+    .progress-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .progress-bar {
+      flex: 1;
+      height: 6px;
+      background: var(--border);
+      border-radius: 99px;
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      border-radius: 99px;
+      background: linear-gradient(90deg, var(--gold), #E8C97A);
+    }
+    .level-badge {
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 99px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+    .badge-high     { background: var(--green-bg); color: var(--green); }
+    .badge-moderate { background: var(--gold-light); color: #92620F; }
+    .badge-low      { background: var(--red-bg); color: var(--red); }
+
+    /* ── Alert Box ───────────────────────────────────── */
+    .alert-box {
+      border-radius: 8px;
+      padding: 22px 26px;
+      margin-bottom: 20px;
+      border: 1px solid;
+      border-left: 5px solid;
+      font-size: 0.95rem;
+    }
+    .alert-box .alert-title {
+      font-weight: 700;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
+    }
+    .alert-green { background: var(--green-bg); border-color: #B2DFCF; border-left-color: var(--green); }
+    .alert-green .alert-title { color: var(--green); }
+    .alert-red   { background: var(--red-bg);   border-color: #F5C6C2; border-left-color: var(--red); }
+    .alert-red   .alert-title { color: var(--red); }
+
+    /* ── Growth Plan Items ───────────────────────────── */
+    .plan-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .plan-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 22px 24px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      position: relative;
+    }
+    .plan-card .plan-num {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2.5rem;
+      color: var(--gold-light);
+      position: absolute;
+      top: 14px;
+      right: 18px;
+      line-height: 1;
+    }
+    .plan-card h4 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.05rem;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .plan-card p { font-size: 0.92rem; color: var(--body-text); }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .timeline-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px 22px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .timeline-card .tl-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 8px;
+    }
+    .timeline-card p { font-size: 0.92rem; }
+
+    /* ── Course Cards ────────────────────────────────── */
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .course-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: box-shadow 0.2s, transform 0.2s;
+      text-decoration: none;
+      color: inherit;
+    }
+    .course-card:hover {
+      box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+      transform: translateY(-3px);
+    }
+    .course-badge {
+      display: inline-block;
+      background: var(--teal-bg);
+      color: var(--teal);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 99px;
+      align-self: flex-start;
+    }
+    .course-card h4 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 0.98rem;
+      color: var(--navy);
+      line-height: 1.4;
+    }
+    .course-card .course-provider {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .course-card .course-focus {
+      font-size: 0.84rem;
+      color: var(--body-text);
+      flex: 1;
+    }
+    .course-card .course-rating {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--gold);
+    }
+    .course-link {
+      display: inline-block;
+      margin-top: 4px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--teal);
+      text-decoration: none;
+    }
+    .course-link:hover { text-decoration: underline; }
+
+    /* ── Divider ─────────────────────────────────────── */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 48px 0 0;
+    }
+
+    /* ── Footer ──────────────────────────────────────── */
+    footer {
+      margin-top: 64px;
+      padding: 32px 60px;
+      background: var(--navy);
+      color: rgba(255,255,255,0.5);
+      font-size: 0.8rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    footer strong { color: rgba(255,255,255,0.8); }
+
+    /* ── Print ───────────────────────────────────────── */
+    @media print {
+      body { background: #fff; }
+      .cover { background: var(--navy) !important; -webkit-print-color-adjust: exact; }
+      .score-card, .info-card, .obs-card, .plan-card, .course-card { box-shadow: none !important; }
+    }
+
+    /* ── Responsive ──────────────────────────────────── */
+    @media (max-width: 700px) {
+      .cover { padding: 32px 24px; }
+      .cover h1 { font-size: 1.8rem; }
+      .score-cards, .obs-grid, .plan-grid, .timeline, .course-grid { grid-template-columns: 1fr; }
+      .page { padding: 0 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════ COVER -->
+<div class="cover">
+  <div>
+    <div class="cover-label">Interview Coaching Report</div>
+    <h1>Personal Growth Analysis<br>& Coaching Plan</h1>
+  </div>
+  <div class="cover-meta">
+    <div><strong>Candidate</strong><br>Sarah Mitchell</div>
+    <div style="margin-top:12px"><strong>Position Applied For</strong><br>Product Manager</div>
+    <div style="margin-top:12px"><strong>Report Date</strong><br>June 4, 2026</div>
+    <div style="margin-top:12px"><strong>Report ID</strong><br>RPT-2026-0047</div>
+  </div>
+</div>
+<div class="gold-rule"></div>
+
+<div class="page">
+
+  <!-- ═════════════════════════════════════ ABOUT THIS REPORT -->
+  <div class="section">
+    <div class="section-label">Section 1</div>
+    <h2>About This Report</h2>
+
+    <div class="score-cards">
+      <div class="score-card">
+        <div class="sc-label">Honesty &amp; Authenticity Score</div>
+        <div class="sc-value">88%</div>
+        <div class="sc-status status-good">Low Risk — Appears Genuine</div>
+      </div>
+      <div class="score-card">
+        <div class="sc-label">How Confident We Are in This Report</div>
+        <div class="sc-value">85%</div>
+        <div class="sc-status status-good">Well-Validated</div>
+      </div>
+      <div class="score-card">
+        <div class="sc-label">How Well Everything Aligned</div>
+        <div class="sc-value">91%</div>
+        <div class="sc-status status-good">Strong Alignment</div>
+      </div>
+    </div>
+
+    <div class="info-card">
+      <h3>Your Profile at a Glance</h3>
+      <ul>
+        <li><span class="li-label">Candidate</span> Sarah Mitchell</li>
+        <li><span class="li-label">Position Applied For</span> Product Manager</li>
+        <li><span class="li-label">Analysis Date</span> June 4, 2026 at 09:14</li>
+        <li><span class="li-label">Overall Result</span> <span class="status-good" style="font-weight:600">Strong candidate with clear growth areas</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════ WHAT WE NOTICED -->
+  <div class="section">
+    <div class="section-label">Section 2</div>
+    <h2>What We Noticed During the Interview</h2>
+    <p style="color:var(--muted);font-size:0.92rem;margin-bottom:24px;">
+      Our system analyzed your interview from three angles at the same time: how you looked, how you sounded, and what you said. Here is a plain summary of what it found.
+    </p>
+
+    <div class="obs-grid">
+      <div class="obs-card">
+        <div class="obs-type">Visual</div>
+        <h4>How You Looked</h4>
+        <div class="obs-item">
+          <div class="obs-key">Eye Contact</div>
+          <div class="obs-val">Stable and mostly direct — you looked at the camera confidently during most of your answers.</div>
+        </div>
+        <div class="obs-item">
+          <div class="obs-key">Facial Expressions</div>
+          <div class="obs-val">Your expressions matched what you were saying throughout the interview.</div>
+        </div>
+        <div class="obs-item">
+          <div class="obs-key">Body Language</div>
+          <div class="obs-val">Professional posture with good engagement throughout.</div>
+        </div>
+      </div>
+
+      <div class="obs-card">
+        <div class="obs-type">Audio</div>
+        <h4>How You Sounded</h4>
+        <div class="obs-item">
+          <div class="obs-key">Tone of Voice</div>
+          <div class="obs-val">Natural variation in your voice — you didn't sound flat or robotic.</div>
+        </div>
+        <div class="obs-item">
+          <div class="obs-key">Signs of Nervousness</div>
+          <div class="obs-val">Slightly elevated at the start but settled quickly. Normal for an interview setting.</div>
+        </div>
+        <div class="obs-item">
+          <div class="obs-key">Overall Confidence</div>
+          <div class="obs-val">Strong and steady projection throughout most of the session.</div>
+        </div>
+      </div>
+
+      <div class="obs-card">
+        <div class="obs-type">Speech</div>
+        <h4>What You Said</h4>
+        <div class="obs-item">
+          <div class="obs-key">How Clearly You Expressed Yourself</div>
+          <div class="obs-val">High clarity — you used clear, organized language to explain your ideas.</div>
+        </div>
+        <div class="obs-item">
+          <div class="obs-key">Signs of Genuine Communication</div>
+          <div class="obs-val">Direct and authentic. No significant use of hedging or evasive language.</div>
+        </div>
+        <div class="obs-item">
+          <div class="obs-key">How Well You Stayed on Topic</div>
+          <div class="obs-val">Excellent. You addressed each question directly and with relevant detail.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════ YOUR PERSONALITY STYLE -->
+  <div class="section">
+    <div class="section-label">Section 3</div>
+    <h2>Your Personality Style</h2>
+    <p style="color:var(--muted);font-size:0.92rem;margin-bottom:24px;">
+      This section describes how you naturally tend to think, work, and connect with others. These are not judgments — they are observations to help you understand yourself better. Each trait is shown as a score out of 100.
+    </p>
+
+    <table class="styled-table">
+      <thead>
+        <tr>
+          <th>Personality Trait</th>
+          <th>Your Score</th>
+          <th style="width:200px">Strength Level</th>
+          <th>What This Means for You</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Curiosity &amp; Openness to New Ideas</strong></td>
+          <td>
+            <div class="progress-wrap">
+              <span class="trait-score">82</span>
+              <div class="progress-bar"><div class="progress-fill" style="width:82%"></div></div>
+            </div>
+          </td>
+          <td><span class="level-badge badge-high">High</span></td>
+          <td>You are creative and very open to new experiences. You likely enjoy exploring different ideas and find routine work less engaging.</td>
+        </tr>
+        <tr>
+          <td><strong>Organization &amp; Reliability</strong></td>
+          <td>
+            <div class="progress-wrap">
+              <span class="trait-score">91</span>
+              <div class="progress-bar"><div class="progress-fill" style="width:91%"></div></div>
+            </div>
+          </td>
+          <td><span class="level-badge badge-high">High</span></td>
+          <td>You are highly organized and goal-oriented. People can count on you to follow through on commitments.</td>
+        </tr>
+        <tr>
+          <td><strong>Social Energy &amp; Communication</strong></td>
+          <td>
+            <div class="progress-wrap">
+              <span class="trait-score">58</span>
+              <div class="progress-bar"><div class="progress-fill" style="width:58%"></div></div>
+            </div>
+          </td>
+          <td><span class="level-badge badge-moderate">Moderate</span></td>
+          <td>You are comfortable in both social and solo settings. You can engage well in groups without feeling drained.</td>
+        </tr>
+        <tr>
+          <td><strong>Teamwork &amp; Cooperation</strong></td>
+          <td>
+            <div class="progress-wrap">
+              <span class="trait-score">76</span>
+              <div class="progress-bar"><div class="progress-fill" style="width:76%"></div></div>
+            </div>
+          </td>
+          <td><span class="level-badge badge-high">High</span></td>
+          <td>You are cooperative and empathetic. You tend to put the team's needs first and resolve conflicts calmly.</td>
+        </tr>
+        <tr>
+          <td><strong>Emotional Sensitivity</strong></td>
+          <td>
+            <div class="progress-wrap">
+              <span class="trait-score">28</span>
+              <div class="progress-bar"><div class="progress-fill" style="width:28%"></div></div>
+            </div>
+          </td>
+          <td><span class="level-badge badge-low">Low</span></td>
+          <td>You are emotionally stable and handle pressure well. Stressful situations rarely throw you off balance.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="margin-top:24px">
+      <div class="alert-box alert-green">
+        <div class="alert-title">Integrity Check</div>
+        Your honesty score for this interview is <strong>88%</strong>, which puts you in the low-risk category. Your words, expressions, and tone of voice were consistent with each other throughout the session. No significant areas of concern were detected.
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════ GROWTH PLAN -->
+  <div class="section">
+    <div class="section-label">Section 4</div>
+    <h2>Your Personal Growth Plan</h2>
+    <p style="color:var(--muted);font-size:0.92rem;margin-bottom:24px;">
+      Based on your results, here are the most impactful areas to work on and practical steps to help you grow professionally.
+    </p>
+
+    <div class="plan-grid">
+      <div class="plan-card">
+        <div class="plan-num">1</div>
+        <h4>Build Your Leadership Voice</h4>
+        <p>Your personality and reliability make you a strong candidate for leadership roles. Start asserting your ideas more directly in meetings — your insights are valuable and deserve to be heard.</p>
+      </div>
+      <div class="plan-card">
+        <div class="plan-num">2</div>
+        <h4>Expand Your Comfort Zone in Large Groups</h4>
+        <p>Your moderate social energy is a strength in many settings. Joining cross-functional projects or speaking at team stand-ups will help you grow your presence in larger environments.</p>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-card">
+        <div class="tl-label">In the Next 3 Months</div>
+        <p>Lead a small project from start to finish — take ownership of planning, communication, and delivery. This will strengthen your confidence and visibility as a decision-maker.</p>
+      </div>
+      <div class="timeline-card">
+        <div class="tl-label">Over the Next Year</div>
+        <p>Aim for a senior role where you manage a team or a key product area. Your combination of reliability, creativity, and empathy positions you well for strategic leadership positions.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════ RECOMMENDED COURSES -->
+  <div class="section">
+    <div class="section-label">Section 5</div>
+    <h2>Recommended Courses for Your Growth</h2>
+    <p style="color:var(--muted);font-size:0.92rem;margin-bottom:24px;">
+      These courses are selected specifically for you based on your results. Each one is practical and beginner-friendly — no prior experience needed. They are available free or at low cost on edX.
+    </p>
+
+    <div class="course-grid">
+      <div class="course-card">
+        <span class="course-badge">edX Course</span>
+        <h4>Leadership and Communication</h4>
+        <div class="course-provider">Rochester Institute of Technology</div>
+        <div class="course-focus">Learn how to communicate with authority and lead others effectively — perfect for stepping into your first leadership role.</div>
+        <div class="course-rating">
+          ★★★★½ &nbsp;<span style="color:var(--muted);font-weight:400">4.6 / 5</span>
+        </div>
+        <a class="course-link" href="https://www.edx.org/course/leadership-and-communication" target="_blank">View on edX →</a>
+      </div>
+
+      <div class="course-card">
+        <span class="course-badge">edX Course</span>
+        <h4>Becoming an Effective Leader</h4>
+        <div class="course-provider">Harvard Business School Online</div>
+        <div class="course-focus">A practical introduction to leadership from Harvard — covers how to inspire teams, handle conflict, and make confident decisions.</div>
+        <div class="course-rating">
+          ★★★★★ &nbsp;<span style="color:var(--muted);font-weight:400">4.8 / 5</span>
+        </div>
+        <a class="course-link" href="https://www.edx.org/course/becoming-an-effective-leader" target="_blank">View on edX →</a>
+      </div>
+
+      <div class="course-card">
+        <span class="course-badge">edX Course</span>
+        <h4>Communicating Strategically</h4>
+        <div class="course-provider">Purdue University</div>
+        <div class="course-focus">Sharpen how you present ideas, run meetings, and communicate upward. Great for professionals moving into product or management roles.</div>
+        <div class="course-rating">
+          ★★★★½ &nbsp;<span style="color:var(--muted);font-weight:400">4.5 / 5</span>
+        </div>
+        <a class="course-link" href="https://www.edx.org/course/communicating-strategically" target="_blank">View on edX →</a>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /page -->
+
+<hr class="divider" />
+
+<footer>
+  <div>
+    <strong>Authentic Growth Coaching Report</strong><br>
+    Generated by the Multimodal Interview Analysis System
+  </div>
+  <div style="text-align:right">
+    Sarah Mitchell &nbsp;·&nbsp; Product Manager &nbsp;·&nbsp; June 4, 2026<br>
+    Report ID: RPT-2026-0047
+  </div>
+</footer>
+
+</body>
+</html>

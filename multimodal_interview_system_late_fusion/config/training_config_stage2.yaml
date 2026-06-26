@@ -1,0 +1,98 @@
+# Training Configuration - Stage 2: MDPE + SEUMLD
+# Optimized for combined dataset training on laptop
+
+# Dataset paths
+dataset:
+  mdpe_path: "data/mdpe_dataset"
+  train_split: 0.7
+  val_split: 0.15
+  test_split: 0.15
+  shuffle: true
+  seed: 42
+
+# Data augmentation
+augmentation:
+  video:
+    enabled: true
+    horizontal_flip: 0.5
+    brightness_range: [0.8, 1.2]
+    contrast_range: [0.8, 1.2]
+    
+  audio:
+    enabled: true
+    noise_factor: 0.01
+    time_shift: 0.1
+    pitch_shift: 2
+    
+  text:
+    enabled: true
+    synonym_replacement: 0.1
+    random_deletion: 0.05
+
+# Optimizer settings - Lower LR for fine-tuning
+optimizer:
+  type: "adamw"
+  lr: 2e-4  # Increased 4x to force unlearning of Deceptive bias
+  weight_decay: 1e-4  # Reduced decay to allow faster weight updates
+  betas: [0.9, 0.999]
+  eps: 1e-8
+
+# Scheduler settings
+scheduler:
+  type: "cosine_annealing_warm_restarts"
+  T_0: 10
+  T_mult: 2
+  eta_min: 1e-7
+
+# Training settings - Optimized for Stage 2 (MDPE + SEUMLD, ~4,400 samples)
+# Optimized for RTX 5070 Ti (12GB VRAM) - Maximum GPU utilization
+training:
+  batch_size: 20              # Increased from 12 - better GPU utilization
+  num_epochs: 36              # Keep fixed training horizon aligned with selected best epoch
+  num_workers: 2              # Faster loading with parallel workers
+  pin_memory: true            # Faster GPU transfer
+  persistent_workers: true    # Keep workers alive to reduce per-epoch overhead
+  prefetch_factor: 4          # Prefetch 4 batches ahead
+  gradient_accumulation_steps: 2  # Effective batch size = 40
+  gradient_clip: 1.0
+  early_stopping_patience: 15  # More patience for larger dataset
+  warmup_epochs: 3            # Longer warmup
+  compile_model: false        # Disabled - causes Triton errors on Windows
+  
+# Validation settings
+validation:
+  frequency: 1
+  save_best: true
+  metric: "val_loss"
+  deception_threshold: 0.50  # Reverted from 0.30 to recover accuracy based on user feedback
+  
+# Checkpointing
+checkpoint:
+  save_dir: "checkpoints"
+  save_frequency: 0  # Disable periodic checkpoints; save best-model checkpoints only
+  keep_last_n: 1     # Keep only the most recent checkpoint artifact
+  monitor: "val_loss_balanced_accuracy"  # Min val loss, tie-break with higher balanced accuracy
+  mode: "custom"
+  metric_tie_epsilon: 1e-8
+  
+# Logging
+logging:
+  log_dir: "logs"
+  tensorboard: false
+  wandb: false
+  
+# Device
+device: "cuda"
+mixed_precision: true
+
+# Loss weights - Stage 2 balances personality and deception
+# Deception weight increased significantly to force learning of Truthful class
+loss_weights:
+  personality_mse: 0.2  # Reduced from 0.5 to focus more on deception
+  deception_ce: 3.0     # Increased from 2.0 to make it the absolute PRIMARY FOCUS
+  cultural_bias: 0.2    # Moderate weight for cultural fairness
+
+# Deception-loss behavior
+loss:
+  use_focal_loss: false
+  max_class_weight_ratio: 5.0

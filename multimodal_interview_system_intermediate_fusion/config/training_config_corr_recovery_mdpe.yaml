@@ -1,0 +1,87 @@
+# Corr Recovery (Final Attempt) - MDPE Only
+# Goal: improve personality corr_mean with minimal representation drift
+
+dataset:
+  mdpe_path: "D:/Grad/Datasets/MDPE-Dataset"
+  train_split: 0.7
+  val_split: 0.15
+  test_split: 0.15
+  shuffle: true
+  seed: 42
+
+augmentation:
+  video:
+    enabled: false
+    horizontal_flip: 0.0
+    brightness_range: [1.0, 1.0]
+    contrast_range: [1.0, 1.0]
+  audio:
+    enabled: false
+    noise_factor: 0.0
+    time_shift: 0.0
+    pitch_shift: 0
+  text:
+    enabled: false
+    synonym_replacement: 0.0
+    random_deletion: 0.0
+
+optimizer:
+  type: "adamw"
+  lr: 2e-5
+  weight_decay: 1e-3
+  betas: [0.9, 0.999]
+  eps: 1e-8
+
+scheduler:
+  type: "reduce_on_plateau"
+  factor: 0.5
+  patience: 2
+  min_lr: 1e-7
+
+training:
+  batch_size: 8
+  num_epochs: 46  # Resume from 36 -> run epochs 37..46 (10 epochs)
+  num_workers: 0
+  pin_memory: true
+  persistent_workers: false
+  prefetch_factor: 2
+  gradient_clip: 1.0
+  early_stopping_patience: 5
+  warmup_epochs: 0
+  compile_model: false
+
+validation:
+  frequency: 1
+  save_best: true
+  metric: "corr_mean"
+
+checkpoint:
+  save_dir: "checkpoints_corr_recovery"
+  save_frequency: 2
+  keep_last_n: 5
+
+logging:
+  log_dir: "logs"
+  batch_log_interval: 1
+  tensorboard: false
+  wandb: false
+
+device: "cuda"
+mixed_precision: true
+
+data_loading:
+  use_face_detection: true
+
+loss_weights:
+  personality_mse: 0.2
+  personality_ccc: 2.2
+  deception_ce: 0.0
+  cultural_bias: 0.0
+
+# Keep shared layers frozen with deception freeze to avoid destabilizing
+# the shared representation while doing trait-head calibration.
+freeze_shared_layers_with_deception: true
+
+loss:
+  use_focal_loss: false
+  max_class_weight_ratio: 5.0

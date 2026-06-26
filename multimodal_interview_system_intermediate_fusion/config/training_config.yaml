@@ -1,0 +1,99 @@
+# Training Configuration
+
+# Dataset paths
+dataset:
+  mdpe_path: "data/mdpe_dataset"
+  train_split: 0.7
+  val_split: 0.15
+  test_split: 0.15
+  shuffle: true
+  seed: 42
+
+# Data augmentation
+augmentation:
+  video:
+    enabled: true
+    horizontal_flip: 0.5
+    brightness_range: [0.8, 1.2]
+    contrast_range: [0.8, 1.2]
+    
+  audio:
+    enabled: true
+    noise_factor: 0.01
+    time_shift: 0.1
+    pitch_shift: 2
+    
+  text:
+    enabled: true
+    synonym_replacement: 0.1
+    random_deletion: 0.05
+
+# Optimizer settings
+optimizer:
+  type: "adamw"
+  lr: 1e-4  # Higher LR is fine since backbones are frozen
+  weight_decay: 1e-3  # Stronger regularization for prediction heads
+  betas: [0.9, 0.999]
+  eps: 1e-8
+
+# Scheduler settings
+scheduler:
+  type: "cosine_annealing_warm_restarts"
+  T_0: 10
+  T_mult: 2
+  eta_min: 1e-7  # Lower minimum LR for better convergence
+
+# Training settings
+training:
+  batch_size: 8  # Balanced for GPU memory with 3 datasets
+  num_epochs: 30  # Full training with balanced data
+  num_workers: 2  # Try 2 workers for better speed
+  pin_memory: true
+  persistent_workers: true  # Keep workers alive
+  gradient_accumulation_steps: 2  # Effective batch size = 16
+  gradient_clip: 1.0  # Standard gradient clipping
+  early_stopping_patience: 10  # Stop early if not improving
+  warmup_epochs: 2  # Warmup for stability
+  
+# Validation settings
+validation:
+  frequency: 1  # Validate every N epochs
+  save_best: true
+  metric: "val_loss"
+  
+# Checkpointing
+checkpoint:
+  save_dir: "checkpoints"
+  save_frequency: 1  # Save every epoch to avoid losing progress
+  keep_last_n: 5  # Keep more checkpoints
+  
+# Logging
+logging:
+  log_dir: "logs"
+  tensorboard: true
+  wandb: false
+  wandb_project: "multimodal-interview-analysis"
+  
+# Device
+device: "cuda"  # Use GPU for training
+mixed_precision: true  # Enable FP16 for faster GPU compute
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

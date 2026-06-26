@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=initial-scale=1.0">
+    <title>Authentic Growth Executive Report</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #F8F6F1;
+            --card-bg: #FFFFFF;
+            --text-color: #2D3748;
+            --text-title: #1B2A4A;
+            --accent-gold: #C9A84C;
+            --accent-gold-hover: #B0923B;
+            --status-green: #2E7D62;
+            --status-red: #A63228;
+            --border-color: #E2E8F0;
+            --shadow-sm: 0 4px 6px rgba(27, 42, 74, 0.03);
+            --shadow-md: 0 10px 15px -3px rgba(27, 42, 74, 0.05), 0 4px 6px -2px rgba(27, 42, 74, 0.02);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 50px 20px;
+        }
+
+        .report-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: var(--card-bg);
+            padding: 50px 60px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-md);
+            border-top: 6px solid var(--accent-gold);
+        }
+
+        /* Header Branding */
+        .report-meta-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--bg-color);
+            padding-bottom: 15px;
+            margin-bottom: 35px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent-gold);
+            font-weight: 600;
+        }
+
+        /* Headings */
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.4rem;
+            color: var(--text-title);
+            line-height: 1.2;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: var(--text-title);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border-color);
+            font-weight: 600;
+        }
+
+        h3 {
+            font-size: 1.15rem;
+            color: var(--text-title);
+            margin-top: 25px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 18px;
+            font-size: 1.05rem;
+            color: var(--text-color);
+        }
+
+        /* Blockquotes / Profile Card */
+        blockquote {
+            background-color: #FAF9F6;
+            border-left: 3px solid var(--accent-gold);
+            padding: 20px 25px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: var(--shadow-sm);
+        }
+
+        blockquote p {
+            margin-bottom: 0;
+            font-size: 1rem;
+        }
+
+        blockquote ul {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        blockquote li {
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        blockquote strong {
+            color: var(--text-title);
+        }
+
+        /* Tables styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.95rem;
+            box-shadow: var(--shadow-sm);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th {
+            background-color: var(--text-title);
+            color: #FFFFFF;
+            text-align: left;
+            padding: 14px 18px;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+        }
+
+        td {
+            padding: 14px 18px;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-color);
+        }
+
+        tr:nth-child(even) td {
+            background-color: #FAF9F6;
+        }
+
+        tr:last-child td {
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        /* Highlight classes */
+        strong {
+            font-weight: 600;
+        }
+
+        code {
+            background-color: #F1EFF0;
+            color: var(--text-title);
+            font-family: inherit;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        /* Lists */
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        /* Recommended edX Course Cards */
+        .courses-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .course-card {
+            background-color: #FFFFFF;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 22px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .course-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(27, 42, 74, 0.08);
+            border-color: var(--accent-gold);
+        }
+
+        .course-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: rgba(201, 168, 76, 0.1);
+            color: var(--accent-gold-hover);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 30px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .course-header {
+            margin-bottom: 12px;
+            padding-right: 65px;
+        }
+
+        .course-title {
+            font-size: 1.05rem;
+            color: var(--text-title);
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 4px;
+        }
+
+        .course-instructor {
+            font-size: 0.85rem;
+            color: #718096;
+            font-weight: 500;
+        }
+
+        .course-focus {
+            font-size: 0.92rem;
+            color: var(--text-color);
+            margin-bottom: 20px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .course-btn {
+            display: inline-block;
+            text-decoration: none;
+            color: #FFFFFF;
+            background-color: var(--text-title);
+            font-size: 0.88rem;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-align: center;
+            transition: background-color 0.2s ease;
+        }
+
+        .course-btn:hover {
+            background-color: var(--accent-gold);
+        }
+
+        /* Print stylesheet */
+        @media print {
+            body {
+                background-color: #FFFFFF;
+                color: #000000;
+                padding: 0;
+            }
+
+            .report-wrapper {
+                box-shadow: none;
+                padding: 0;
+                border-top: none;
+            }
+
+            .course-card {
+                page-break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid #CBD5E0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .report-wrapper {
+                padding: 30px 20px;
+            }
+            .courses-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="report-wrapper">
+        <div class="report-meta-header">
+            <span>Executive Assessment Dossier</span>
+            <span>Authentic Growth v3.0</span>
+        </div>
+        <h1>Authentic Growth: Development &amp; Coaching Report</h1>
+<h2>Session Summary</h2>
+<blockquote>
+<p>Candidate Profile Summary
+- Candidate Name: <code>John Doe</code>
+- Candidate ID: <code>SYS-37219</code>
+- Target Position: <code>Software Engineer</code>
+- Analysis Date: <code>June 16, 2026</code></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Overall Area</th>
+<th style="text-align: center;">Rating</th>
+<th style="text-align: left;">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Trust and Consistency</strong></td>
+<td style="text-align: center;"><code>4.7%</code></td>
+<td style="text-align: left;"><code>LOW RISK</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Assessment Quality</strong></td>
+<td style="text-align: center;"><code>82%</code></td>
+<td style="text-align: left;"><code>VALIDATED</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Response Flow</strong></td>
+<td style="text-align: center;"><code>80%</code></td>
+<td style="text-align: left;"><code>STABLE</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Detailed Behavioral Insights</h2>
+<h3>Visual Presence</h3>
+<ul>
+<li>Gaze Stability: <code>Stable and direct gaze.</code></li>
+<li>Expression Naturalness: <code>Consistent emotional display.</code></li>
+<li>Postural Engagement: <code>Professional and engaged posture.</code></li>
+</ul>
+<h3>Vocal Clarity</h3>
+<ul>
+<li>Speech Variation: <code>Natural pitch variation.</code></li>
+<li>Vocal Calmness: <code>Normal stress baseline.</code></li>
+<li>Projection Confidence: <code>Moderate vocal projection.</code></li>
+</ul>
+<h3>Communication Structure</h3>
+<ul>
+<li>Response Richness: <code>High linguistic density.</code></li>
+<li>Modality Richness: <code>Multimodal presence.</code></li>
+<li>Assessment Flow: <code>Logical and structured delivery.</code></li>
+</ul>
+<hr />
+<h2>Development &amp; Coaching Summary</h2>
+<h3>Overall Assessment</h3>
+<ul>
+<li>Trust and Consistency: <code>MEDIUM TRUST</code></li>
+<li>Response Quality: <code>VALIDATED RESPONSE</code></li>
+<li>Assessment Flow: <code>STABLE TRAJECTORY</code></li>
+</ul>
+<h3>Targeted Development Areas</h3>
+<ul>
+<li>Vocal Calmness: <code>Enhance vocal calmness under pressure.</code></li>
+<li>Vocal Variation: <code>Increase natural pitch variation.</code></li>
+<li>Expression Consistency: <code>Improve micro-expression consistency.</code></li>
+</ul>
+<h3>Actionable Recommendations</h3>
+<ul>
+<li><code>Practice deep breathing exercises.</code></li>
+<li><code>Incorporate vocal variety drills.</code></li>
+<li><code>Maintain consistent professional presence.</code></li>
+</ul>
+<hr />
+<h2>Detailed Development Metrics</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Metric</th>
+<th style="text-align: center;">Rating</th>
+<th style="text-align: left;">Rating Trend</th>
+<th style="text-align: center;">Confidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Trust and Consistency</strong></td>
+<td style="text-align: center;"><code>4.7%</code></td>
+<td style="text-align: left;"><code>Slightly decreasing</code></td>
+<td style="text-align: center;"><code>HIGH</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Vocal Naturalness</strong></td>
+<td style="text-align: center;"><code>80%</code></td>
+<td style="text-align: left;"><code>Stable</code></td>
+<td style="text-align: center;"><code>VALIDATED</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Communication Flow</strong></td>
+<td style="text-align: center;"><code>90%</code></td>
+<td style="text-align: left;"><code>Stable</code></td>
+<td style="text-align: center;"><code>VALIDATED</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Presence Engagement</strong></td>
+<td style="text-align: center;"><code>80%</code></td>
+<td style="text-align: left;"><code>Stable</code></td>
+<td style="text-align: center;"><code>VALIDATED</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Overall Development Summary</h2>
+<ul>
+<li><strong>Trust and Consistency:</strong> <code>MEDIUM RISK</code></li>
+<li><strong>Response Quality:</strong> <code>VALIDATED</code></li>
+<li><strong>Assessment Flow:</strong> <code>STABLE</code></li>
+<li><strong>Professional Presence:</strong> <code>VALIDATED</code></li>
+</ul>
+<h3>Development Rating: <code>VALIDATED PROFESSIONAL</code></h3>
+<hr />
+<h2>Development Timeline</h2>
+<ul>
+<li><code>Session Date:</code> <code>2026-06-03 06:24</code></li>
+<li><code>Analysis Date:</code> <code>2026-06-06 06:24</code></li>
+<li><code>Target Date:</code> <code>2027-03-06</code></li>
+<li><code>Review Date:</code> <code>2027-06-06</code></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Area</th>
+<th style="text-align: center;">Status</th>
+<th style="text-align: left;">Rating</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Visual Presence</strong></td>
+<td style="text-align: center;"><code>VALIDATED</code></td>
+<td style="text-align: left;"><code>80%</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Vocal Clarity</strong></td>
+<td style="text-align: center;"><code>STABLE</code></td>
+<td style="text-align: left;"><code>85%</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Communication</strong></td>
+<td style="text-align: center;"><code>STABLE</code></td>
+<td style="text-align: left;"><code>85%</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Professionalism</strong></td>
+<td style="text-align: center;"><code>VALIDATED</code></td>
+<td style="text-align: left;"><code>85%</code></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Overall Area</th>
+<th style="text-align: center;">Rating</th>
+<th style="text-align: left;">Rating Confidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Trust and Trust</strong></td>
+<td style="text-align: center;"><code>81%</code></td>
+<td style="text-align: left;"><code>HIGH</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Response Quality</strong></td>
+<td style="text-align: center;"><code>83%</code></td>
+<td style="text-align: left;"><code>VALIDATED</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Assessment Quality</strong></td>
+<td style="text-align: center;"><code>81%</code></td>
+<td style="text-align: left;"><code>VALIDATED</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Response Flow</strong></td>
+<td style="text-align: center;"><code>80%</code></td>
+<td style="text-align: left;"><code>VALIDATED</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Session Summary &amp; Coaching Insights</h2>
+<blockquote>
+<p><code>Trust and Consistency</code> - <code>VALIDATED</code>
+<code>Communication Structure</code> - <code>STABLE</code>
+<code>Response Flow</code> - <code>STURDY</code>
+<code>Professionalism</code> - <code>TRUSTED</code></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Overall Area</th>
+<th style="text-align: center;">Overall Rating</th>
+<th style="text-align: left;">Analysis Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Trust and Trust</strong></td>
+<td style="text-align: center;"><code>81%</code></td>
+<td style="text-align: left;"><code>2026-06-06 06:24</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Response Quality</strong></td>
+<td style="text-align: center;"><code>82%</code></td>
+<td style="text-align: left;"><code>2026-06-01 06:24</code></td>
+</tr>
+</tbody>
+</table>
+    </div>
+</body>
+</html>

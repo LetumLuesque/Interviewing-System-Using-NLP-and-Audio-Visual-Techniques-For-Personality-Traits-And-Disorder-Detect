@@ -1,0 +1,92 @@
+# Training Configuration - Stage 1: MDPE Only (Baseline)
+# Optimized for single dataset training on laptop
+
+# Dataset paths
+dataset:
+  mdpe_path: "D:/Grad/Datasets/MDPE-Dataset"
+  train_split: 0.7
+  val_split: 0.15
+  test_split: 0.15
+  shuffle: true
+  seed: 42
+
+# Data augmentation
+augmentation:
+  video:
+    enabled: true
+    horizontal_flip: 0.5
+    brightness_range: [0.8, 1.2]
+    contrast_range: [0.8, 1.2]
+    
+  audio:
+    enabled: true
+    noise_factor: 0.01
+    time_shift: 0.1
+    pitch_shift: 2
+    
+  text:
+    enabled: true
+    synonym_replacement: 0.1
+    random_deletion: 0.05
+
+# Optimizer settings
+optimizer:
+  type: "adamw"
+  lr: 1e-4  # Standard learning rate for initial training
+  weight_decay: 1e-3
+  betas: [0.9, 0.999]
+  eps: 1e-8
+
+# Scheduler settings
+scheduler:
+  type: "cosine_annealing_warm_restarts"
+  T_0: 10
+  T_mult: 2
+  eta_min: 1e-7
+
+# Training settings - Optimized for Stage 1 (MDPE only, ~1,200 samples)
+# Optimized for RTX 5070 Ti (12GB VRAM) - Maximum GPU utilization
+training:
+  batch_size: 8               # Reduced for GPU memory (was 24, too large)
+  num_epochs: 50              # Fewer epochs for initial test
+  num_workers: 0              # Set to 0 for Windows to avoid multiprocessing issues
+  balance_classes: true       # Balance truthful/deceptive to avoid bias carryover into Stage 2
+  pin_memory: true            # Faster GPU transfer
+  persistent_workers: true    # Keep workers alive between epochs (faster)
+  prefetch_factor: 4          # Prefetch 4 batches ahead (faster data loading)
+  gradient_accumulation_steps: 3  # Effective batch size = 24 (8 * 3)
+  gradient_clip: 1.0
+  early_stopping_patience: 10  # Stop early if not improving
+  warmup_epochs: 2
+  compile_model: false        # Disabled - causes Triton errors on Windows
+  
+# Validation settings
+validation:
+  frequency: 1  # Validate every epoch
+  save_best: true
+  metric: "val_loss"
+  
+# Checkpointing
+checkpoint:
+  save_dir: "checkpoints"
+  save_frequency: 5  # Save every 5 epochs (faster training)
+  keep_last_n: 3     # Keep fewer checkpoints for Stage 1
+  
+# Logging
+logging:
+  log_dir: "logs"
+  tensorboard: false  # Disable for faster training
+  wandb: false
+  
+# Device
+device: "cuda"  # Use GPU for training
+mixed_precision: true  # Enable FP16 for faster GPU compute
+
+# Loss weights - Stage 1 focuses on personality detection
+# Higher personality weight, lower deception weight
+# Stage 2 will increase deception weight for better deception accuracy
+loss_weights:
+  personality_mse: 3.0  # High weight - prioritize personality learning
+  deception_ce: 0.2     # Low weight - deception will be improved in later stages
+  cultural_bias: 0.1    # Lower weight for Stage 1
+  personality_ccc: 0.0  # No CCC pressure in Stage 1

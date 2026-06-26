@@ -1,0 +1,105 @@
+# Training Configuration - Stage 2: MDPE + SEUMLD
+# Optimized for combined dataset training on laptop
+
+# Dataset paths
+dataset:
+  mdpe_path: "D:/Grad/Datasets/MDPE-Dataset"
+  train_split: 0.7
+  val_split: 0.15
+  test_split: 0.15
+  shuffle: true
+  seed: 42
+
+# Data augmentation
+augmentation:
+  video:
+    enabled: true
+    horizontal_flip: 0.5
+    brightness_range: [0.8, 1.2]
+    contrast_range: [0.8, 1.2]
+    
+  audio:
+    enabled: true
+    noise_factor: 0.01
+    time_shift: 0.1
+    pitch_shift: 2
+    
+  text:
+    enabled: true
+    synonym_replacement: 0.1
+    random_deletion: 0.05
+
+# Optimizer settings - Conservative LR for fine-tuning on combined dataset
+optimizer:
+  type: "adamw"
+  lr: 5e-5  # Reduced to prevent overfitting (was 2e-4)
+  weight_decay: 1e-3  # Stronger regularization to prevent overfitting (was 1e-4)
+  betas: [0.9, 0.999]
+  eps: 1e-8
+
+# Scheduler settings - ReduceLROnPlateau for stable fine-tuning
+# (Replaced cosine warm restarts which caused LR overshoot on restart cycles)
+scheduler:
+  type: "reduce_on_plateau"
+  factor: 0.5        # Halve LR when plateau detected
+  patience: 5        # Wait 5 epochs before reducing LR
+  min_lr: 1e-7       # Minimum learning rate
+
+# Training settings - Optimized for Stage 2 (MDPE + SEUMLD, ~4,400 samples)
+# Optimized for RTX 5070 Ti (12GB VRAM) - Maximum GPU utilization
+training:
+  batch_size: 16              # Reduced from 32 for better stability and faster feedback
+  num_epochs: 50              # Sufficient with early stopping (was 100)
+  num_workers: 0              # Single process - Windows paging file limitation prevents multiprocessing
+  pin_memory: true            # Faster GPU transfer
+  persistent_workers: false   # Not needed with num_workers=0
+  prefetch_factor: 2          # Ignored with num_workers=0
+  gradient_clip: 1.0
+  early_stopping_patience: 25  # Increased from 15 to give the model more time to stabilize
+  warmup_epochs: 0            # No warmup needed with ReduceLROnPlateau
+  compile_model: false        # Disabled - causes Triton errors on Windows
+  
+# Validation settings
+validation:
+  frequency: 1
+  save_best: true
+  metric: "corr_mean"
+  
+# Checkpointing
+checkpoint:
+  save_dir: "checkpoints"
+  save_frequency: 5  # Save every 5 epochs
+  keep_last_n: 5     # Keep more checkpoints for Stage 2
+  
+# Logging
+logging:
+  log_dir: "logs"
+  batch_log_interval: 1
+  tensorboard: false
+  wandb: false
+  
+# Device
+device: "cuda"
+mixed_precision: true
+
+# Data loading controls
+data_loading:
+  use_face_detection: true
+  mdpe_priority_weight_when_deception_frozen: 1.0  # Keep 1.0 for speed (no forced MDPE oversampling)
+
+# Loss weights - Stage 2 balanced personality + deception
+# Deception weight increased significantly to force learning of Truthful class
+loss_weights:
+  personality_mse: 0.2  # Reduced to focus more on deception
+  personality_ccc: 1.0  # Moderate CCC pressure
+  deception_ce: 3.0     # Increased to make it the PRIMARY FOCUS (was 0.0)
+  cultural_bias: 0.2    # Moderate weight for cultural fairness
+
+# Keep shared representation trainable even with frozen deception head (if any)
+# But in Stage 2 we want to train the deception head too
+freeze_shared_layers_with_deception: false
+
+# Stage 2 imbalance handling
+loss:
+  use_focal_loss: false
+  max_class_weight_ratio: 5.0

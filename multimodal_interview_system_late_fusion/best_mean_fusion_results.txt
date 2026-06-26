@@ -1,0 +1,31 @@
+================================================================================
+LATE FUSION: MEAN FUSION RESULTS
+================================================================================
+Best Model Path: checkpoints/mean/stage2/best_model_epoch_13.pt
+(Note: This model was trained for a total of 43 epochs across both stages! 
+ It completed 15 epochs in Stage 1, and 28 epochs in Stage 2. The best 
+ checkpoint was saved at the 13th epoch of Stage 2, which is effectively 
+ Epoch 28 out of the 43 total epochs it processed.)
+
+Performance Metrics:
+- Personality Trait Correlation (Mean): 0.6746
+  * Openness: 0.6755
+  * Conscientiousness: 0.6770
+  * Extraversion: 0.6761
+  * Agreeableness: 0.6687
+  * Neuroticism: 0.6754
+  
+- Deception Detection:
+  * Balanced Accuracy: 0.7976
+  * Overall Accuracy: 0.8397
+  * Precision: 1.0000
+  * Recall: 0.5951
+  * F1 Score: 0.7462
+  * Confusion Matrix: TP=147, FP=0, TN=377, FN=100
+
+- Fairness / Bias:
+  * Variance Across Cultural Groups: 2.6324
+  * Statistical Parity Difference: 20.1719
+
+Notes: Gracefully handles missing transcript data by dynamically computing 
+the mean of the available active modalities (Video + Audio). Highly robust.

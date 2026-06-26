@@ -1,0 +1,74 @@
+# Training Configuration - Stage 3: Joint Balance (Personality + Deception)
+# Goal: Recover personality correlations while maintaining deception accuracy.
+
+# Dataset paths
+dataset:
+  mdpe_path: "D:/Grad/Datasets/MDPE-Dataset"
+  train_split: 0.7
+  val_split: 0.15
+  test_split: 0.15
+  shuffle: true
+  seed: 42
+
+# Optimizer settings - Very conservative LR for final joint fine-tuning
+optimizer:
+  type: "adamw"
+  lr: 2e-5           # Lowered for final stabilization
+  weight_decay: 5e-3  # Stronger regularization for the final stage
+  betas: [0.9, 0.999]
+  eps: 1e-8
+
+# Scheduler settings - ReduceLROnPlateau
+scheduler:
+  type: "reduce_on_plateau"
+  factor: 0.5
+  patience: 5
+  min_lr: 1e-7
+
+# Training settings
+training:
+  batch_size: 16
+  num_epochs: 30              # Final polish stage usually converges faster
+  num_workers: 0
+  pin_memory: true
+  gradient_clip: 1.0
+  early_stopping_patience: 10
+  
+# Validation settings
+validation:
+  frequency: 1
+  save_best: true
+  metric: "val_joint_score"   # Custom metric that balances personality + deception
+  
+# Checkpointing
+checkpoint:
+  save_dir: "checkpoints"
+  save_frequency: 5
+  keep_last_n: 3
+  
+# Logging
+logging:
+  log_dir: "logs"
+  batch_log_interval: 1
+  tensorboard: false
+  wandb: false
+
+# Device
+device: "cuda"
+mixed_precision: true
+
+# Loss weights - JOINT BALANCE
+# We re-enable personality heads to recover correlation.
+loss_weights:
+  personality_mse: 0.5   # Re-enabled to recover MAE
+  personality_ccc: 1.5   # Strong weight to recover Correlation
+  deception_ce: 1.0      # Maintained to keep deception detection
+  cultural_bias: 0.1     # Maintain bias penalty
+
+# Unlock everything for final joint optimization
+freeze_shared_layers_with_deception: false
+
+# Imbalance handling
+loss:
+  use_focal_loss: false
+  max_class_weight_ratio: 5.0

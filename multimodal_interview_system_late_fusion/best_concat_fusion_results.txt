@@ -1,0 +1,32 @@
+================================================================================
+LATE FUSION: CONCAT (LEARNED) FUSION RESULTS
+================================================================================
+Best Model Path: checkpoints/concat/stage2/best_model_epoch_13.pt
+(Note: This model was trained for a total of 46 epochs across both stages! 
+ It completed 18 epochs in Stage 1, and 28 epochs in Stage 2. The best 
+ checkpoint was saved at the 13th epoch of Stage 2, which is effectively 
+ Epoch 31 out of the 46 total epochs it processed.)
+
+Performance Metrics:
+- Personality Trait Correlation (Mean): 0.5700
+  * Openness: 0.5725
+  * Conscientiousness: 0.5740
+  * Extraversion: 0.5711
+  * Agreeableness: 0.5634
+  * Neuroticism: 0.5693
+  
+- Deception Detection:
+  * Balanced Accuracy: 0.7976
+  * Overall Accuracy: 0.8397
+  * Precision: 1.0000
+  * Recall: 0.5951
+  * F1 Score: 0.7462
+  * Confusion Matrix: TP=147, FP=0, TN=377, FN=100
+
+- Fairness / Bias:
+  * Variance Across Cultural Groups: 77.3003
+  * Statistical Parity Difference: 18.5781
+
+Notes: Suffers heavily from cultural bias and a 10% drop in personality trait
+accuracy due to the static MLP architecture reacting poorly to the zero-padding 
+required to substitute missing text transcripts in the SEUMLD dataset.

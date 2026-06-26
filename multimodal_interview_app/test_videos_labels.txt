@@ -1,0 +1,39 @@
+=============================================================================
+  TEST VIDEOS GROUND TRUTH LABELS
+=============================================================================
+Use this list to verify the accuracy of the multimodal models in the app.
+Labels are derived from the MDPE dataset protocol (Subjects 194-233 are deceptive).
+
+-----------------------------------------------------------------------------
+TRUTHFUL SAMPLES
+-----------------------------------------------------------------------------
+TRUTHFUL    | D:\Code\Grad\multimodal_interview_app\temp\ -2-2.mp4
+TRUTHFUL    | D:\Code\Grad\multimodal_interview_app\temp\ -24-23.mp4
+TRUTHFUL    | D:\Code\Grad\multimodal_interview_app\temp\87.mp4
+TRUTHFUL    | D:\Code\Grad\multimodal_interview_app\temp\90.mp4
+TRUTHFUL    | D:\Code\Grad\multimodal_interview_app\temp\YTDown.com_YouTube_Very-good-advice-by-Sir-Christopher-Lee-_Media_lHrSDjDd5bA_001_1080p-00.00.00.000-00.00.41.903.mp4
+
+-----------------------------------------------------------------------------
+DECEPTIVE SAMPLES (MDPE Subset 194-233)
+-----------------------------------------------------------------------------
+DECEPTION   | D:\Code\Grad\multimodal_interview_app\temp\194-1-watch.mp4
+DECEPTION   | D:\Code\Grad\multimodal_interview_app\temp\194-2-2.mp4
+DECEPTION   | D:\Code\Grad\multimodal_interview_app\temp\194-4-5.mp4
+DECEPTION   | D:\Code\Grad\multimodal_interview_app\temp\194-5-8.mp4
+DECEPTION   | D:\Code\Grad\multimodal_interview_app\temp\206-1-1.mp4
+DECEPTION   | D:\Code\Grad\multimodal_interview_app\temp\206-10-10.mp4
+DECEPTION   | D:\Code\Grad\multimodal_interview_app\temp\206-13-13.mp4
+DECEPTION   | D:\Code\Grad\multimodal_interview_app\temp\206-17-19.mp4
+DECEPTION   | D:\Code\Grad\multimodal_interview_app\temp\206-4-4.mp4
+DECEPTION   | D:\Code\Grad\multimodal_interview_app\temp\206-8-9.mp4
+DECEPTION   | D:\Code\Grad\multimodal_interview_app\temp\206-9-8.mp4
+DECEPTION   | D:\Code\Grad\multimodal_interview_app\temp\223-3-3.mp4
+DECEPTION   | D:\Code\Grad\multimodal_interview_app\temp\228-17-12.mp4
+DECEPTION   | D:\Code\Grad\multimodal_interview_app\temp\230-2-2.mp4
+DECEPTION   | D:\Code\Grad\multimodal_interview_app\temp\230-21-11.mp4
+DECEPTION   | D:\Code\Grad\multimodal_interview_app\temp\230-3-3.mp4
+DECEPTION   | D:\Code\Grad\multimodal_interview_app\temp\230-6-10.mp4
+DECEPTION   | D:\Code\Grad\multimodal_interview_app\temp\230-9-14.mp4
+DECEPTION   | D:\Code\Grad\multimodal_interview_app\temp\231-8-23.mp4
+DECEPTION   | D:\Code\Grad\multimodal_interview_app\temp\232-24-24.mp4
+DECEPTION   | D:\Code\Grad\multimodal_interview_app\temp\232-4-7.mp4

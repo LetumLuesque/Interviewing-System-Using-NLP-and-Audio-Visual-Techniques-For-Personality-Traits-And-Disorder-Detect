@@ -1,0 +1,15 @@
+﻿
+Name                         L
+                             e
+                             n
+                             g
+                             t
+                             h
+----                         -
+training_20260210_200857.log 9
+training_20260210_162900.log 6
+training_20260210_170009.log 9
+training_20260210_004158.log 5
+training_20260210_173541.log 0
+
+

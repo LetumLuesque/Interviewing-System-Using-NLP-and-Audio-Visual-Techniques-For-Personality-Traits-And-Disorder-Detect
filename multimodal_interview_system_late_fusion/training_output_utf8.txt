@@ -1,0 +1,41 @@
+﻿python : 2025-12-10 23:19:14,290 - training - INFO - 
+================================================================================
+At C:\Users\aline\AppData\Local\Temp\ps-script-8c5a96ad-de8f-488e-857d-528f229cb361.ps1:7 char:46
++ ... iew_system; python main_train.py --data_dir "D:\Grad\Datasets\MDPE-Da ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (2025-12-10 23:1...===============:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+2025-12-10 23:19:14,290 - training - INFO - Multimodal Interview Analysis System - Training
+2025-12-10 23:19:14,290 - training - INFO - 
+================================================================================
+2025-12-10 23:19:14,290 - training - INFO - Training config: config/training_config.yaml
+2025-12-10 23:19:14,290 - training - INFO - Model config: config/model_config.yaml
+2025-12-10 23:19:14,290 - training - INFO - Data directory: D:\Grad\Datasets\MDPE-Dataset
+2025-12-10 23:19:14,290 - training - INFO - Using device: cuda
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+W0000 00:00:1765401554.304252   26280 inference_feedback_manager.cc:114] Feedback manager requires a model with a 
+single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1765401554.319815   13480 inference_feedback_manager.cc:114] Feedback manager requires a model with a 
+single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1765401554.321853   28600 inference_feedback_manager.cc:114] Feedback manager requires a model with a 
+single signature inference. Disabling support for feedback tensors.
+2025-12-10 23:19:14,794 - training - INFO - Train samples: 28
+2025-12-10 23:19:14,794 - training - INFO - Val samples: 6
+Some weights of ViTModel were not initialized from the model checkpoint at google/vit-large-patch16-224 and are newly 
+initialized: ['vit.pooler.dense.bias', 'vit.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+2025-12-10 23:19:29,022 - training - INFO - Total parameters: 649,577,931
+2025-12-10 23:19:29,022 - training - INFO - Trainable parameters: 649,577,931
+2025-12-10 23:19:29,034 - training - INFO - Starting training...
+
+Epoch 1 [Train]:   0%|          | 0/2 [00:00<?, 
+?it/s]C:\Users\aline\AppData\Roaming\Python\Python311\site-packages\google\protobuf\symbol_database.py:55: 
+UserWarning: SymbolDatabase.GetPrototype() is deprecated. Please use message_factory.GetMessageClass() instead. 
+SymbolDatabase.GetPrototype() will be removed soon.
+  warnings.warn('SymbolDatabase.GetPrototype() is deprecated. Please '
+C:\Users\aline\AppData\Roaming\Python\Python311\site-packages\google\protobuf\symbol_database.py:55: UserWarning: 
+SymbolDatabase.GetPrototype() is deprecated. Please use message_factory.GetMessageClass() instead. 
+SymbolDatabase.GetPrototype() will be removed soon.
+  warnings.warn('SymbolDatabase.GetPrototype() is deprecated. Please '

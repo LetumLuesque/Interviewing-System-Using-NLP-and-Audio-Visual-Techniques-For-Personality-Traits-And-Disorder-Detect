@@ -1,0 +1,941 @@
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:10:2026-02-11 03:51:23,020 - training - INFO - Val samples: 332
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:13:2026-02-11 03:51:25,984 - training - INFO - Early stopping enabled with patience: 10 epochs
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:16:2026-02-11 03:51:25,985 - training - INFO - Total epochs: 36
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:17:2026-02-11 03:51:25,985 - training - INFO - Best model so far: epoch 0, val_loss inf, corr_mean -inf, bal_acc -inf
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:19:2026-02-11 03:51:25,985 - training - INFO - Starting Epoch 1/36
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:21:2026-02-11 03:51:25,985 - training - INFO - Training epoch 1...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:23:Epoch 1 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:47:2026-02-11 03:53:40,619 - training - INFO - Completed training for epoch 1
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:48:2026-02-11 03:53:40,619 - training - INFO - Validating epoch 1...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:50:Epoch 1 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:51:2026-02-11 03:53:51,165 - training - INFO -   val_mae_openness: 34.0706
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:52:2026-02-11 03:53:51,165 - training - INFO -   val_mae_conscientiousness: 39.5840
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:53:2026-02-11 03:53:51,165 - training - INFO -   val_mae_extraversion: 35.0502
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:54:2026-02-11 03:53:51,165 - training - INFO -   val_mae_agreeableness: 33.3553
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:55:2026-02-11 03:53:51,165 - training - INFO -   val_mae_neuroticism: 36.0971
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:56:2026-02-11 03:53:51,165 - training - INFO -   val_mae_mean: 35.6314
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:57:2026-02-11 03:53:51,165 - training - INFO -   val_mae_std: 2.1815
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:58:2026-02-11 03:53:51,165 - training - INFO -   val_corr_openness: -0.0070
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:59:2026-02-11 03:53:51,165 - training - INFO -   val_corr_conscientiousness: -0.0160
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:60:2026-02-11 03:53:51,165 - training - INFO -   val_corr_extraversion: -0.0341
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:61:2026-02-11 03:53:51,165 - training - INFO -   val_corr_agreeableness: 0.0671
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:62:2026-02-11 03:53:51,165 - training - INFO -   val_corr_neuroticism: 0.0194
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:63:2026-02-11 03:53:51,165 - training - INFO -   val_corr_mean: 0.0059
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:64:2026-02-11 03:53:51,165 - training - INFO -   val_deception_accuracy: 0.5512
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:65:2026-02-11 03:53:51,165 - training - INFO -   val_deception_balanced_accuracy: 0.5000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:66:2026-02-11 03:53:51,166 - training - INFO -   val_deception_precision: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:67:2026-02-11 03:53:51,166 - training - INFO -   val_deception_recall: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:68:2026-02-11 03:53:51,166 - training - INFO -   val_deception_f1: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:69:2026-02-11 03:53:51,166 - training - INFO -   val_deception_tn: 183.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:70:2026-02-11 03:53:51,166 - training - INFO -   val_deception_fp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:71:2026-02-11 03:53:51,166 - training - INFO -   val_deception_fn: 149.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:72:2026-02-11 03:53:51,166 - training - INFO -   val_deception_tp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:73:2026-02-11 03:53:51,166 - training - INFO -   val_loss: 106.9481
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:74:2026-02-11 03:53:51,166 - training - INFO - Completed validation for epoch 1
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:76:2026-02-11 03:53:52,635 - training - INFO - Saved best model at epoch 1 (corr_mean improved: -inf -> 0.0059)
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:77:2026-02-11 03:53:52,635 - training - INFO - Epoch 1 completed successfully
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:79:2026-02-11 03:53:52,635 - training - INFO - Starting Epoch 2/36
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:81:2026-02-11 03:53:52,635 - training - INFO - Training epoch 2...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:83:Epoch 2 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:107:2026-02-11 03:55:53,290 - training - INFO - Completed training for epoch 2
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:108:2026-02-11 03:55:53,290 - training - INFO - Validating epoch 2...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:110:Epoch 2 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:111:2026-02-11 03:56:02,075 - training - INFO -   val_mae_openness: 12.5368
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:112:2026-02-11 03:56:02,075 - training - INFO -   val_mae_conscientiousness: 14.0723
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:113:2026-02-11 03:56:02,075 - training - INFO -   val_mae_extraversion: 12.9187
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:114:2026-02-11 03:56:02,075 - training - INFO -   val_mae_agreeableness: 9.9265
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:115:2026-02-11 03:56:02,075 - training - INFO -   val_mae_neuroticism: 10.5956
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:116:2026-02-11 03:56:02,075 - training - INFO -   val_mae_mean: 12.0100
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:117:2026-02-11 03:56:02,075 - training - INFO -   val_mae_std: 1.5295
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:118:2026-02-11 03:56:02,075 - training - INFO -   val_corr_openness: 0.0076
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:119:2026-02-11 03:56:02,075 - training - INFO -   val_corr_conscientiousness: -0.0227
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:120:2026-02-11 03:56:02,075 - training - INFO -   val_corr_extraversion: -0.0181
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:121:2026-02-11 03:56:02,075 - training - INFO -   val_corr_agreeableness: 0.0661
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:122:2026-02-11 03:56:02,075 - training - INFO -   val_corr_neuroticism: 0.0222
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:123:2026-02-11 03:56:02,075 - training - INFO -   val_corr_mean: 0.0110
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:124:2026-02-11 03:56:02,075 - training - INFO -   val_deception_accuracy: 0.5512
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:125:2026-02-11 03:56:02,075 - training - INFO -   val_deception_balanced_accuracy: 0.5000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:126:2026-02-11 03:56:02,075 - training - INFO -   val_deception_precision: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:127:2026-02-11 03:56:02,075 - training - INFO -   val_deception_recall: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:128:2026-02-11 03:56:02,075 - training - INFO -   val_deception_f1: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:129:2026-02-11 03:56:02,076 - training - INFO -   val_deception_tn: 183.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:130:2026-02-11 03:56:02,076 - training - INFO -   val_deception_fp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:131:2026-02-11 03:56:02,076 - training - INFO -   val_deception_fn: 149.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:132:2026-02-11 03:56:02,076 - training - INFO -   val_deception_tp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:133:2026-02-11 03:56:02,076 - training - INFO -   val_loss: 35.8552
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:134:2026-02-11 03:56:02,076 - training - INFO - Completed validation for epoch 2
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:136:2026-02-11 03:56:03,541 - training - INFO - Saved best model at epoch 2 (corr_mean improved: 0.0059 -> 0.0110)
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:137:2026-02-11 03:56:03,541 - training - INFO - Epoch 2 completed successfully
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:139:2026-02-11 03:56:03,541 - training - INFO - Starting Epoch 3/36
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:141:2026-02-11 03:56:03,541 - training - INFO - Training epoch 3...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:143:Epoch 3 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:167:2026-02-11 03:57:57,075 - training - INFO - Completed training for epoch 3
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:168:2026-02-11 03:57:57,075 - training - INFO - Validating epoch 3...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:170:Epoch 3 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:171:2026-02-11 03:58:05,016 - training - INFO -   val_mae_openness: 8.8652
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:172:2026-02-11 03:58:05,017 - training - INFO -   val_mae_conscientiousness: 9.6806
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:173:2026-02-11 03:58:05,017 - training - INFO -   val_mae_extraversion: 9.0474
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:174:2026-02-11 03:58:05,017 - training - INFO -   val_mae_agreeableness: 9.4428
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:175:2026-02-11 03:58:05,017 - training - INFO -   val_mae_neuroticism: 9.6657
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:176:2026-02-11 03:58:05,017 - training - INFO -   val_mae_mean: 9.3403
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:177:2026-02-11 03:58:05,017 - training - INFO -   val_mae_std: 0.3297
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:178:2026-02-11 03:58:05,017 - training - INFO -   val_corr_openness: 0.0077
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:179:2026-02-11 03:58:05,017 - training - INFO -   val_corr_conscientiousness: -0.0229
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:180:2026-02-11 03:58:05,017 - training - INFO -   val_corr_extraversion: -0.0177
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:181:2026-02-11 03:58:05,017 - training - INFO -   val_corr_agreeableness: 0.0661
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:182:2026-02-11 03:58:05,017 - training - INFO -   val_corr_neuroticism: 0.0226
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:183:2026-02-11 03:58:05,017 - training - INFO -   val_corr_mean: 0.0111
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:184:2026-02-11 03:58:05,017 - training - INFO -   val_deception_accuracy: 0.5512
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:185:2026-02-11 03:58:05,017 - training - INFO -   val_deception_balanced_accuracy: 0.5000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:186:2026-02-11 03:58:05,017 - training - INFO -   val_deception_precision: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:187:2026-02-11 03:58:05,017 - training - INFO -   val_deception_recall: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:188:2026-02-11 03:58:05,017 - training - INFO -   val_deception_f1: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:189:2026-02-11 03:58:05,017 - training - INFO -   val_deception_tn: 183.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:190:2026-02-11 03:58:05,017 - training - INFO -   val_deception_fp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:191:2026-02-11 03:58:05,017 - training - INFO -   val_deception_fn: 149.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:192:2026-02-11 03:58:05,017 - training - INFO -   val_deception_tp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:193:2026-02-11 03:58:05,017 - training - INFO -   val_loss: 27.9771
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:194:2026-02-11 03:58:05,017 - training - INFO - Completed validation for epoch 3
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:196:2026-02-11 03:58:06,125 - training - INFO - Saved best model at epoch 3 (corr_mean improved: 0.0110 -> 0.0111)
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:197:2026-02-11 03:58:06,125 - training - INFO - Epoch 3 completed successfully
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:199:2026-02-11 03:58:06,125 - training - INFO - Starting Epoch 4/36
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:201:2026-02-11 03:58:06,125 - training - INFO - Training epoch 4...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:203:Epoch 4 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:227:2026-02-11 03:59:55,101 - training - INFO - Completed training for epoch 4
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:228:2026-02-11 03:59:55,101 - training - INFO - Validating epoch 4...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:230:Epoch 4 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:231:2026-02-11 04:00:02,919 - training - INFO -   val_mae_openness: 8.5046
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:232:2026-02-11 04:00:02,919 - training - INFO -   val_mae_conscientiousness: 9.6622
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:233:2026-02-11 04:00:02,919 - training - INFO -   val_mae_extraversion: 9.0029
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:234:2026-02-11 04:00:02,919 - training - INFO -   val_mae_agreeableness: 9.1255
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:235:2026-02-11 04:00:02,919 - training - INFO -   val_mae_neuroticism: 9.2805
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:236:2026-02-11 04:00:02,919 - training - INFO -   val_mae_mean: 9.1151
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:237:2026-02-11 04:00:02,919 - training - INFO -   val_mae_std: 0.3774
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:238:2026-02-11 04:00:02,919 - training - INFO -   val_corr_openness: 0.0078
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:239:2026-02-11 04:00:02,920 - training - INFO -   val_corr_conscientiousness: -0.0228
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:240:2026-02-11 04:00:02,920 - training - INFO -   val_corr_extraversion: -0.0177
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:241:2026-02-11 04:00:02,920 - training - INFO -   val_corr_agreeableness: 0.0658
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:242:2026-02-11 04:00:02,920 - training - INFO -   val_corr_neuroticism: 0.0229
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:243:2026-02-11 04:00:02,920 - training - INFO -   val_corr_mean: 0.0112
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:244:2026-02-11 04:00:02,920 - training - INFO -   val_deception_accuracy: 0.5512
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:245:2026-02-11 04:00:02,920 - training - INFO -   val_deception_balanced_accuracy: 0.5000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:246:2026-02-11 04:00:02,920 - training - INFO -   val_deception_precision: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:247:2026-02-11 04:00:02,920 - training - INFO -   val_deception_recall: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:248:2026-02-11 04:00:02,920 - training - INFO -   val_deception_f1: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:249:2026-02-11 04:00:02,920 - training - INFO -   val_deception_tn: 183.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:250:2026-02-11 04:00:02,920 - training - INFO -   val_deception_fp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:251:2026-02-11 04:00:02,920 - training - INFO -   val_deception_fn: 149.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:252:2026-02-11 04:00:02,920 - training - INFO -   val_deception_tp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:253:2026-02-11 04:00:02,920 - training - INFO -   val_loss: 27.3070
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:254:2026-02-11 04:00:02,920 - training - INFO - Completed validation for epoch 4
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:256:2026-02-11 04:00:04,046 - training - INFO - Saved best model at epoch 4 (corr_mean improved: 0.0111 -> 0.0112)
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:257:2026-02-11 04:00:04,046 - training - INFO - Epoch 4 completed successfully
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:259:2026-02-11 04:00:04,046 - training - INFO - Starting Epoch 5/36
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:261:2026-02-11 04:00:04,046 - training - INFO - Training epoch 5...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:263:Epoch 5 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:287:2026-02-11 04:01:53,488 - training - INFO - Completed training for epoch 5
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:288:2026-02-11 04:01:53,488 - training - INFO - Validating epoch 5...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:290:Epoch 5 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:291:2026-02-11 04:02:01,335 - training - INFO -   val_mae_openness: 8.5473
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:292:2026-02-11 04:02:01,335 - training - INFO -   val_mae_conscientiousness: 9.6617
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:293:2026-02-11 04:02:01,335 - training - INFO -   val_mae_extraversion: 8.9338
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:294:2026-02-11 04:02:01,335 - training - INFO -   val_mae_agreeableness: 8.9857
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:295:2026-02-11 04:02:01,335 - training - INFO -   val_mae_neuroticism: 9.2836
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:296:2026-02-11 04:02:01,335 - training - INFO -   val_mae_mean: 9.0824
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:297:2026-02-11 04:02:01,335 - training - INFO -   val_mae_std: 0.3725
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:298:2026-02-11 04:02:01,335 - training - INFO -   val_corr_openness: 0.0077
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:299:2026-02-11 04:02:01,335 - training - INFO -   val_corr_conscientiousness: -0.0227
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:300:2026-02-11 04:02:01,335 - training - INFO -   val_corr_extraversion: -0.0179
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:301:2026-02-11 04:02:01,335 - training - INFO -   val_corr_agreeableness: 0.0661
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:302:2026-02-11 04:02:01,335 - training - INFO -   val_corr_neuroticism: 0.0223
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:303:2026-02-11 04:02:01,336 - training - INFO -   val_corr_mean: 0.0111
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:304:2026-02-11 04:02:01,336 - training - INFO -   val_deception_accuracy: 0.5512
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:305:2026-02-11 04:02:01,336 - training - INFO -   val_deception_balanced_accuracy: 0.5000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:306:2026-02-11 04:02:01,336 - training - INFO -   val_deception_precision: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:307:2026-02-11 04:02:01,336 - training - INFO -   val_deception_recall: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:308:2026-02-11 04:02:01,336 - training - INFO -   val_deception_f1: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:309:2026-02-11 04:02:01,336 - training - INFO -   val_deception_tn: 183.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:310:2026-02-11 04:02:01,336 - training - INFO -   val_deception_fp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:311:2026-02-11 04:02:01,336 - training - INFO -   val_deception_fn: 149.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:312:2026-02-11 04:02:01,336 - training - INFO -   val_deception_tp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:313:2026-02-11 04:02:01,336 - training - INFO -   val_loss: 27.2086
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:314:2026-02-11 04:02:01,336 - training - INFO - Completed validation for epoch 5
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:316:2026-02-11 04:02:01,336 - training - INFO - No improvement for 1/10 epochs (monitor=corr_mean). corr_mean did not improve (best=0.0112, current=0.0111)
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:317:2026-02-11 04:02:02,448 - training - INFO - Saved periodic checkpoint at epoch 5
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:318:2026-02-11 04:02:02,448 - training - INFO - Epoch 5 completed successfully
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:320:2026-02-11 04:02:02,448 - training - INFO - Starting Epoch 6/36
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:322:2026-02-11 04:02:02,448 - training - INFO - Training epoch 6...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:324:Epoch 6 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:348:2026-02-11 04:03:51,583 - training - INFO - Completed training for epoch 6
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:349:2026-02-11 04:03:51,583 - training - INFO - Validating epoch 6...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:351:Epoch 6 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:352:2026-02-11 04:03:59,425 - training - INFO -   val_mae_openness: 8.5820
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:353:2026-02-11 04:03:59,425 - training - INFO -   val_mae_conscientiousness: 9.6733
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:354:2026-02-11 04:03:59,425 - training - INFO -   val_mae_extraversion: 8.9362
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:355:2026-02-11 04:03:59,425 - training - INFO -   val_mae_agreeableness: 9.3014
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:356:2026-02-11 04:03:59,425 - training - INFO -   val_mae_neuroticism: 9.5563
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:357:2026-02-11 04:03:59,425 - training - INFO -   val_mae_mean: 9.2098
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:358:2026-02-11 04:03:59,425 - training - INFO -   val_mae_std: 0.4031
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:359:2026-02-11 04:03:59,425 - training - INFO -   val_corr_openness: 0.0076
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:360:2026-02-11 04:03:59,425 - training - INFO -   val_corr_conscientiousness: -0.0229
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:361:2026-02-11 04:03:59,425 - training - INFO -   val_corr_extraversion: -0.0178
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:362:2026-02-11 04:03:59,425 - training - INFO -   val_corr_agreeableness: 0.0660
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:363:2026-02-11 04:03:59,425 - training - INFO -   val_corr_neuroticism: 0.0225
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:364:2026-02-11 04:03:59,425 - training - INFO -   val_corr_mean: 0.0111
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:365:2026-02-11 04:03:59,425 - training - INFO -   val_deception_accuracy: 0.5512
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:366:2026-02-11 04:03:59,425 - training - INFO -   val_deception_balanced_accuracy: 0.5000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:367:2026-02-11 04:03:59,425 - training - INFO -   val_deception_precision: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:368:2026-02-11 04:03:59,425 - training - INFO -   val_deception_recall: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:369:2026-02-11 04:03:59,425 - training - INFO -   val_deception_f1: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:370:2026-02-11 04:03:59,425 - training - INFO -   val_deception_tn: 183.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:371:2026-02-11 04:03:59,425 - training - INFO -   val_deception_fp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:372:2026-02-11 04:03:59,426 - training - INFO -   val_deception_fn: 149.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:373:2026-02-11 04:03:59,426 - training - INFO -   val_deception_tp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:374:2026-02-11 04:03:59,426 - training - INFO -   val_loss: 27.5972
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:375:2026-02-11 04:03:59,426 - training - INFO - Completed validation for epoch 6
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:377:2026-02-11 04:03:59,426 - training - INFO - No improvement for 2/10 epochs (monitor=corr_mean). corr_mean did not improve (best=0.0112, current=0.0111)
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:378:2026-02-11 04:03:59,426 - training - INFO - Epoch 6 completed successfully
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:380:2026-02-11 04:03:59,426 - training - INFO - Starting Epoch 7/36
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:382:2026-02-11 04:03:59,426 - training - INFO - Training epoch 7...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:384:Epoch 7 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:408:2026-02-11 04:05:47,834 - training - INFO - Completed training for epoch 7
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:409:2026-02-11 04:05:47,834 - training - INFO - Validating epoch 7...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:411:Epoch 7 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:412:2026-02-11 04:05:55,702 - training - INFO -   val_mae_openness: 8.5097
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:413:2026-02-11 04:05:55,702 - training - INFO -   val_mae_conscientiousness: 9.6711
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:414:2026-02-11 04:05:55,702 - training - INFO -   val_mae_extraversion: 8.9552
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:415:2026-02-11 04:05:55,702 - training - INFO -   val_mae_agreeableness: 8.9988
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:416:2026-02-11 04:05:55,702 - training - INFO -   val_mae_neuroticism: 9.2202
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:417:2026-02-11 04:05:55,702 - training - INFO -   val_mae_mean: 9.0710
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:418:2026-02-11 04:05:55,702 - training - INFO -   val_mae_std: 0.3785
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:419:2026-02-11 04:05:55,702 - training - INFO -   val_corr_openness: 0.0076
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:420:2026-02-11 04:05:55,702 - training - INFO -   val_corr_conscientiousness: -0.0228
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:421:2026-02-11 04:05:55,702 - training - INFO -   val_corr_extraversion: -0.0181
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:422:2026-02-11 04:05:55,703 - training - INFO -   val_corr_agreeableness: 0.0661
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:423:2026-02-11 04:05:55,703 - training - INFO -   val_corr_neuroticism: 0.0222
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:424:2026-02-11 04:05:55,703 - training - INFO -   val_corr_mean: 0.0110
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:425:2026-02-11 04:05:55,703 - training - INFO -   val_deception_accuracy: 0.5512
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:426:2026-02-11 04:05:55,703 - training - INFO -   val_deception_balanced_accuracy: 0.5000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:427:2026-02-11 04:05:55,703 - training - INFO -   val_deception_precision: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:428:2026-02-11 04:05:55,703 - training - INFO -   val_deception_recall: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:429:2026-02-11 04:05:55,703 - training - INFO -   val_deception_f1: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:430:2026-02-11 04:05:55,703 - training - INFO -   val_deception_tn: 183.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:431:2026-02-11 04:05:55,703 - training - INFO -   val_deception_fp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:432:2026-02-11 04:05:55,703 - training - INFO -   val_deception_fn: 149.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:433:2026-02-11 04:05:55,703 - training - INFO -   val_deception_tp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:434:2026-02-11 04:05:55,703 - training - INFO -   val_loss: 27.1723
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:435:2026-02-11 04:05:55,703 - training - INFO - Completed validation for epoch 7
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:437:2026-02-11 04:05:55,703 - training - INFO - No improvement for 3/10 epochs (monitor=corr_mean). corr_mean did not improve (best=0.0112, current=0.0110)
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:438:2026-02-11 04:05:55,703 - training - INFO - Epoch 7 completed successfully
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:440:2026-02-11 04:05:55,703 - training - INFO - Starting Epoch 8/36
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:442:2026-02-11 04:05:55,704 - training - INFO - Training epoch 8...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:444:Epoch 8 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:468:2026-02-11 04:07:44,421 - training - INFO - Completed training for epoch 8
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:469:2026-02-11 04:07:44,421 - training - INFO - Validating epoch 8...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:471:Epoch 8 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:472:2026-02-11 04:07:52,307 - training - INFO -   val_mae_openness: 8.5103
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:473:2026-02-11 04:07:52,307 - training - INFO -   val_mae_conscientiousness: 9.6726
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:474:2026-02-11 04:07:52,307 - training - INFO -   val_mae_extraversion: 8.9470
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:475:2026-02-11 04:07:52,307 - training - INFO -   val_mae_agreeableness: 8.9546
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:476:2026-02-11 04:07:52,307 - training - INFO -   val_mae_neuroticism: 9.3928
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:477:2026-02-11 04:07:52,307 - training - INFO -   val_mae_mean: 9.0955
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:478:2026-02-11 04:07:52,307 - training - INFO -   val_mae_std: 0.4014
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:479:2026-02-11 04:07:52,307 - training - INFO -   val_corr_openness: 0.0073
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:480:2026-02-11 04:07:52,307 - training - INFO -   val_corr_conscientiousness: -0.0225
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:481:2026-02-11 04:07:52,307 - training - INFO -   val_corr_extraversion: -0.0181
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:482:2026-02-11 04:07:52,307 - training - INFO -   val_corr_agreeableness: 0.0659
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:483:2026-02-11 04:07:52,307 - training - INFO -   val_corr_neuroticism: 0.0220
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:484:2026-02-11 04:07:52,307 - training - INFO -   val_corr_mean: 0.0109
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:485:2026-02-11 04:07:52,307 - training - INFO -   val_deception_accuracy: 0.5512
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:486:2026-02-11 04:07:52,308 - training - INFO -   val_deception_balanced_accuracy: 0.5000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:487:2026-02-11 04:07:52,308 - training - INFO -   val_deception_precision: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:488:2026-02-11 04:07:52,308 - training - INFO -   val_deception_recall: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:489:2026-02-11 04:07:52,308 - training - INFO -   val_deception_f1: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:490:2026-02-11 04:07:52,308 - training - INFO -   val_deception_tn: 183.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:491:2026-02-11 04:07:52,308 - training - INFO -   val_deception_fp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:492:2026-02-11 04:07:52,308 - training - INFO -   val_deception_fn: 149.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:493:2026-02-11 04:07:52,308 - training - INFO -   val_deception_tp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:494:2026-02-11 04:07:52,308 - training - INFO -   val_loss: 27.2470
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:495:2026-02-11 04:07:52,308 - training - INFO - Completed validation for epoch 8
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:497:2026-02-11 04:07:52,308 - training - INFO - No improvement for 4/10 epochs (monitor=corr_mean). corr_mean did not improve (best=0.0112, current=0.0109)
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:498:2026-02-11 04:07:52,308 - training - INFO - Epoch 8 completed successfully
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:500:2026-02-11 04:07:52,308 - training - INFO - Starting Epoch 9/36
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:502:2026-02-11 04:07:52,308 - training - INFO - Training epoch 9...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:504:Epoch 9 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:528:2026-02-11 04:09:40,440 - training - INFO - Completed training for epoch 9
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:529:2026-02-11 04:09:40,440 - training - INFO - Validating epoch 9...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:531:Epoch 9 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:532:2026-02-11 04:09:48,349 - training - INFO -   val_mae_openness: 8.5140
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:533:2026-02-11 04:09:48,349 - training - INFO -   val_mae_conscientiousness: 9.6808
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:534:2026-02-11 04:09:48,349 - training - INFO -   val_mae_extraversion: 8.9345
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:535:2026-02-11 04:09:48,349 - training - INFO -   val_mae_agreeableness: 9.0012
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:536:2026-02-11 04:09:48,349 - training - INFO -   val_mae_neuroticism: 9.3026
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:537:2026-02-11 04:09:48,349 - training - INFO -   val_mae_mean: 9.0866
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:538:2026-02-11 04:09:48,349 - training - INFO -   val_mae_std: 0.3894
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:539:2026-02-11 04:09:48,349 - training - INFO -   val_corr_openness: 0.0086
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:540:2026-02-11 04:09:48,349 - training - INFO -   val_corr_conscientiousness: -0.0224
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:541:2026-02-11 04:09:48,349 - training - INFO -   val_corr_extraversion: -0.0151
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:542:2026-02-11 04:09:48,349 - training - INFO -   val_corr_agreeableness: 0.0660
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:543:2026-02-11 04:09:48,349 - training - INFO -   val_corr_neuroticism: 0.0206
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:544:2026-02-11 04:09:48,349 - training - INFO -   val_corr_mean: 0.0115
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:545:2026-02-11 04:09:48,349 - training - INFO -   val_deception_accuracy: 0.5512
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:546:2026-02-11 04:09:48,349 - training - INFO -   val_deception_balanced_accuracy: 0.5000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:547:2026-02-11 04:09:48,349 - training - INFO -   val_deception_precision: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:548:2026-02-11 04:09:48,349 - training - INFO -   val_deception_recall: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:549:2026-02-11 04:09:48,349 - training - INFO -   val_deception_f1: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:550:2026-02-11 04:09:48,349 - training - INFO -   val_deception_tn: 183.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:551:2026-02-11 04:09:48,349 - training - INFO -   val_deception_fp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:552:2026-02-11 04:09:48,349 - training - INFO -   val_deception_fn: 149.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:553:2026-02-11 04:09:48,350 - training - INFO -   val_deception_tp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:554:2026-02-11 04:09:48,350 - training - INFO -   val_loss: 27.2199
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:555:2026-02-11 04:09:48,350 - training - INFO - Completed validation for epoch 9
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:557:2026-02-11 04:09:49,434 - training - INFO - Saved best model at epoch 9 (corr_mean improved: 0.0112 -> 0.0115)
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:558:2026-02-11 04:09:49,434 - training - INFO - Epoch 9 completed successfully
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:560:2026-02-11 04:09:49,434 - training - INFO - Starting Epoch 10/36
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:562:2026-02-11 04:09:49,435 - training - INFO - Training epoch 10...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:564:Epoch 10 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:588:2026-02-11 04:11:39,119 - training - INFO - Completed training for epoch 10
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:589:2026-02-11 04:11:39,119 - training - INFO - Validating epoch 10...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:591:Epoch 10 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:592:2026-02-11 04:11:46,980 - training - INFO -   val_mae_openness: 8.5189
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:593:2026-02-11 04:11:46,980 - training - INFO -   val_mae_conscientiousness: 9.6690
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:594:2026-02-11 04:11:46,981 - training - INFO -   val_mae_extraversion: 8.9290
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:595:2026-02-11 04:11:46,981 - training - INFO -   val_mae_agreeableness: 9.0206
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:596:2026-02-11 04:11:46,981 - training - INFO -   val_mae_neuroticism: 9.2849
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:597:2026-02-11 04:11:46,981 - training - INFO -   val_mae_mean: 9.0845
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:598:2026-02-11 04:11:46,981 - training - INFO -   val_mae_std: 0.3821
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:599:2026-02-11 04:11:46,981 - training - INFO -   val_corr_openness: 0.0070
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:600:2026-02-11 04:11:46,981 - training - INFO -   val_corr_conscientiousness: -0.0221
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:601:2026-02-11 04:11:46,981 - training - INFO -   val_corr_extraversion: -0.0152
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:602:2026-02-11 04:11:46,981 - training - INFO -   val_corr_agreeableness: 0.0654
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:603:2026-02-11 04:11:46,981 - training - INFO -   val_corr_neuroticism: 0.0203
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:604:2026-02-11 04:11:46,981 - training - INFO -   val_corr_mean: 0.0111
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:605:2026-02-11 04:11:46,981 - training - INFO -   val_deception_accuracy: 0.5512
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:606:2026-02-11 04:11:46,981 - training - INFO -   val_deception_balanced_accuracy: 0.5000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:607:2026-02-11 04:11:46,981 - training - INFO -   val_deception_precision: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:608:2026-02-11 04:11:46,981 - training - INFO -   val_deception_recall: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:609:2026-02-11 04:11:46,981 - training - INFO -   val_deception_f1: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:610:2026-02-11 04:11:46,981 - training - INFO -   val_deception_tn: 183.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:611:2026-02-11 04:11:46,981 - training - INFO -   val_deception_fp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:612:2026-02-11 04:11:46,981 - training - INFO -   val_deception_fn: 149.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:613:2026-02-11 04:11:46,981 - training - INFO -   val_deception_tp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:614:2026-02-11 04:11:46,981 - training - INFO -   val_loss: 27.2146
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:615:2026-02-11 04:11:46,982 - training - INFO - Completed validation for epoch 10
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:617:2026-02-11 04:11:46,982 - training - INFO - No improvement for 1/10 epochs (monitor=corr_mean). corr_mean did not improve (best=0.0115, current=0.0111)
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:618:2026-02-11 04:11:48,288 - training - INFO - Saved periodic checkpoint at epoch 10
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:619:2026-02-11 04:11:48,289 - training - INFO - Epoch 10 completed successfully
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:621:2026-02-11 04:11:48,289 - training - INFO - Starting Epoch 11/36
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:623:2026-02-11 04:11:48,289 - training - INFO - Training epoch 11...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:625:Epoch 11 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:649:2026-02-11 04:13:37,967 - training - INFO - Completed training for epoch 11
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:650:2026-02-11 04:13:37,967 - training - INFO - Validating epoch 11...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:652:Epoch 11 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:653:2026-02-11 04:13:45,836 - training - INFO -   val_mae_openness: 8.6144
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:654:2026-02-11 04:13:45,836 - training - INFO -   val_mae_conscientiousness: 9.7828
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:655:2026-02-11 04:13:45,836 - training - INFO -   val_mae_extraversion: 9.0117
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:656:2026-02-11 04:13:45,837 - training - INFO -   val_mae_agreeableness: 9.1447
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:657:2026-02-11 04:13:45,837 - training - INFO -   val_mae_neuroticism: 9.4609
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:658:2026-02-11 04:13:45,837 - training - INFO -   val_mae_mean: 9.2029
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:659:2026-02-11 04:13:45,837 - training - INFO -   val_mae_std: 0.3973
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:660:2026-02-11 04:13:45,837 - training - INFO -   val_corr_openness: -0.0028
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:661:2026-02-11 04:13:45,837 - training - INFO -   val_corr_conscientiousness: -0.0213
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:662:2026-02-11 04:13:45,837 - training - INFO -   val_corr_extraversion: -0.0101
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:663:2026-02-11 04:13:45,837 - training - INFO -   val_corr_agreeableness: 0.0636
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:664:2026-02-11 04:13:45,837 - training - INFO -   val_corr_neuroticism: 0.0123
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:665:2026-02-11 04:13:45,837 - training - INFO -   val_corr_mean: 0.0083
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:666:2026-02-11 04:13:45,837 - training - INFO -   val_deception_accuracy: 0.5512
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:667:2026-02-11 04:13:45,837 - training - INFO -   val_deception_balanced_accuracy: 0.5000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:668:2026-02-11 04:13:45,837 - training - INFO -   val_deception_precision: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:669:2026-02-11 04:13:45,837 - training - INFO -   val_deception_recall: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:670:2026-02-11 04:13:45,837 - training - INFO -   val_deception_f1: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:671:2026-02-11 04:13:45,837 - training - INFO -   val_deception_tn: 183.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:672:2026-02-11 04:13:45,837 - training - INFO -   val_deception_fp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:673:2026-02-11 04:13:45,837 - training - INFO -   val_deception_fn: 149.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:674:2026-02-11 04:13:45,837 - training - INFO -   val_deception_tp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:675:2026-02-11 04:13:45,837 - training - INFO -   val_loss: 27.5611
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:676:2026-02-11 04:13:45,837 - training - INFO - Completed validation for epoch 11
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:678:2026-02-11 04:13:45,837 - training - INFO - No improvement for 2/10 epochs (monitor=corr_mean). corr_mean did not improve (best=0.0115, current=0.0083)
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:679:2026-02-11 04:13:45,838 - training - INFO - Epoch 11 completed successfully
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:681:2026-02-11 04:13:45,838 - training - INFO - Starting Epoch 12/36
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:683:2026-02-11 04:13:45,838 - training - INFO - Training epoch 12...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:685:Epoch 12 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:709:2026-02-11 04:15:34,552 - training - INFO - Completed training for epoch 12
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:710:2026-02-11 04:15:34,552 - training - INFO - Validating epoch 12...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:712:Epoch 12 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:713:2026-02-11 04:15:42,489 - training - INFO -   val_mae_openness: 8.5744
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:714:2026-02-11 04:15:42,489 - training - INFO -   val_mae_conscientiousness: 9.7283
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:715:2026-02-11 04:15:42,489 - training - INFO -   val_mae_extraversion: 8.9631
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:716:2026-02-11 04:15:42,489 - training - INFO -   val_mae_agreeableness: 9.0487
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:717:2026-02-11 04:15:42,489 - training - INFO -   val_mae_neuroticism: 9.4014
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:718:2026-02-11 04:15:42,489 - training - INFO -   val_mae_mean: 9.1432
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:719:2026-02-11 04:15:42,490 - training - INFO -   val_mae_std: 0.3934
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:720:2026-02-11 04:15:42,490 - training - INFO -   val_corr_openness: 0.0007
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:721:2026-02-11 04:15:42,490 - training - INFO -   val_corr_conscientiousness: -0.0210
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:722:2026-02-11 04:15:42,490 - training - INFO -   val_corr_extraversion: -0.0111
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:723:2026-02-11 04:15:42,490 - training - INFO -   val_corr_agreeableness: 0.0636
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:724:2026-02-11 04:15:42,490 - training - INFO -   val_corr_neuroticism: 0.0138
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:725:2026-02-11 04:15:42,490 - training - INFO -   val_corr_mean: 0.0092
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:726:2026-02-11 04:15:42,490 - training - INFO -   val_deception_accuracy: 0.5512
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:727:2026-02-11 04:15:42,490 - training - INFO -   val_deception_balanced_accuracy: 0.5000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:728:2026-02-11 04:15:42,490 - training - INFO -   val_deception_precision: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:729:2026-02-11 04:15:42,490 - training - INFO -   val_deception_recall: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:730:2026-02-11 04:15:42,490 - training - INFO -   val_deception_f1: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:731:2026-02-11 04:15:42,490 - training - INFO -   val_deception_tn: 183.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:732:2026-02-11 04:15:42,490 - training - INFO -   val_deception_fp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:733:2026-02-11 04:15:42,490 - training - INFO -   val_deception_fn: 149.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:734:2026-02-11 04:15:42,490 - training - INFO -   val_deception_tp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:735:2026-02-11 04:15:42,490 - training - INFO -   val_loss: 27.3857
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:736:2026-02-11 04:15:42,490 - training - INFO - Completed validation for epoch 12
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:738:2026-02-11 04:15:42,490 - training - INFO - No improvement for 3/10 epochs (monitor=corr_mean). corr_mean did not improve (best=0.0115, current=0.0092)
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:739:2026-02-11 04:15:42,491 - training - INFO - Epoch 12 completed successfully
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:741:2026-02-11 04:15:42,491 - training - INFO - Starting Epoch 13/36
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:743:2026-02-11 04:15:42,491 - training - INFO - Training epoch 13...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:745:Epoch 13 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:769:2026-02-11 04:17:30,518 - training - INFO - Completed training for epoch 13
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:770:2026-02-11 04:17:30,518 - training - INFO - Validating epoch 13...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:772:Epoch 13 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:773:2026-02-11 04:17:38,352 - training - INFO -   val_mae_openness: 8.8428
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:774:2026-02-11 04:17:38,352 - training - INFO -   val_mae_conscientiousness: 9.8853
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:775:2026-02-11 04:17:38,352 - training - INFO -   val_mae_extraversion: 9.2593
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:776:2026-02-11 04:17:38,352 - training - INFO -   val_mae_agreeableness: 9.3180
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:777:2026-02-11 04:17:38,352 - training - INFO -   val_mae_neuroticism: 9.7621
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:778:2026-02-11 04:17:38,352 - training - INFO -   val_mae_mean: 9.4135
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:779:2026-02-11 04:17:38,352 - training - INFO -   val_mae_std: 0.3749
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:780:2026-02-11 04:17:38,352 - training - INFO -   val_corr_openness: -0.0297
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:781:2026-02-11 04:17:38,352 - training - INFO -   val_corr_conscientiousness: -0.0061
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:782:2026-02-11 04:17:38,352 - training - INFO -   val_corr_extraversion: -0.0205
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:783:2026-02-11 04:17:38,352 - training - INFO -   val_corr_agreeableness: 0.0517
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:784:2026-02-11 04:17:38,352 - training - INFO -   val_corr_neuroticism: -0.0020
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:785:2026-02-11 04:17:38,352 - training - INFO -   val_corr_mean: -0.0013
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:786:2026-02-11 04:17:38,352 - training - INFO -   val_deception_accuracy: 0.5512
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:787:2026-02-11 04:17:38,352 - training - INFO -   val_deception_balanced_accuracy: 0.5000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:788:2026-02-11 04:17:38,352 - training - INFO -   val_deception_precision: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:789:2026-02-11 04:17:38,352 - training - INFO -   val_deception_recall: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:790:2026-02-11 04:17:38,352 - training - INFO -   val_deception_f1: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:791:2026-02-11 04:17:38,353 - training - INFO -   val_deception_tn: 183.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:792:2026-02-11 04:17:38,353 - training - INFO -   val_deception_fp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:793:2026-02-11 04:17:38,353 - training - INFO -   val_deception_fn: 149.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:794:2026-02-11 04:17:38,353 - training - INFO -   val_deception_tp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:795:2026-02-11 04:17:38,353 - training - INFO -   val_loss: 28.1860
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:796:2026-02-11 04:17:38,353 - training - INFO - Completed validation for epoch 13
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:798:2026-02-11 04:17:38,353 - training - INFO - No improvement for 4/10 epochs (monitor=corr_mean). corr_mean did not improve (best=0.0115, current=-0.0013)
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:799:2026-02-11 04:17:38,353 - training - INFO - Epoch 13 completed successfully
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:801:2026-02-11 04:17:38,353 - training - INFO - Starting Epoch 14/36
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:803:2026-02-11 04:17:38,353 - training - INFO - Training epoch 14...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:805:Epoch 14 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:829:2026-02-11 04:19:25,939 - training - INFO - Completed training for epoch 14
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:830:2026-02-11 04:19:25,939 - training - INFO - Validating epoch 14...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:832:Epoch 14 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:833:2026-02-11 04:19:33,821 - training - INFO -   val_mae_openness: 8.5513
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:834:2026-02-11 04:19:33,821 - training - INFO -   val_mae_conscientiousness: 9.6652
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:835:2026-02-11 04:19:33,822 - training - INFO -   val_mae_extraversion: 8.8910
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:836:2026-02-11 04:19:33,822 - training - INFO -   val_mae_agreeableness: 8.9510
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:837:2026-02-11 04:19:33,822 - training - INFO -   val_mae_neuroticism: 9.2419
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:838:2026-02-11 04:19:33,822 - training - INFO -   val_mae_mean: 9.0601
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:839:2026-02-11 04:19:33,822 - training - INFO -   val_mae_std: 0.3738
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:840:2026-02-11 04:19:33,822 - training - INFO -   val_corr_openness: 0.0012
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:841:2026-02-11 04:19:33,822 - training - INFO -   val_corr_conscientiousness: -0.0194
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:842:2026-02-11 04:19:33,822 - training - INFO -   val_corr_extraversion: -0.0150
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:843:2026-02-11 04:19:33,822 - training - INFO -   val_corr_agreeableness: 0.0645
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:844:2026-02-11 04:19:33,822 - training - INFO -   val_corr_neuroticism: 0.0178
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:845:2026-02-11 04:19:33,822 - training - INFO -   val_corr_mean: 0.0098
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:846:2026-02-11 04:19:33,822 - training - INFO -   val_deception_accuracy: 0.5512
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:847:2026-02-11 04:19:33,822 - training - INFO -   val_deception_balanced_accuracy: 0.5000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:848:2026-02-11 04:19:33,822 - training - INFO -   val_deception_precision: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:849:2026-02-11 04:19:33,822 - training - INFO -   val_deception_recall: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:850:2026-02-11 04:19:33,823 - training - INFO -   val_deception_f1: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:851:2026-02-11 04:19:33,823 - training - INFO -   val_deception_tn: 183.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:852:2026-02-11 04:19:33,823 - training - INFO -   val_deception_fp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:853:2026-02-11 04:19:33,823 - training - INFO -   val_deception_fn: 149.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:854:2026-02-11 04:19:33,823 - training - INFO -   val_deception_tp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:855:2026-02-11 04:19:33,823 - training - INFO -   val_loss: 27.1411
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:856:2026-02-11 04:19:33,823 - training - INFO - Completed validation for epoch 14
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:858:2026-02-11 04:19:33,823 - training - INFO - No improvement for 5/10 epochs (monitor=corr_mean). corr_mean did not improve (best=0.0115, current=0.0098)
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:859:2026-02-11 04:19:33,823 - training - INFO - Epoch 14 completed successfully
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:861:2026-02-11 04:19:33,823 - training - INFO - Starting Epoch 15/36
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:863:2026-02-11 04:19:33,824 - training - INFO - Training epoch 15...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:865:Epoch 15 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:889:2026-02-11 04:21:21,392 - training - INFO - Completed training for epoch 15
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:890:2026-02-11 04:21:21,392 - training - INFO - Validating epoch 15...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:892:Epoch 15 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:893:2026-02-11 04:21:29,246 - training - INFO -   val_mae_openness: 8.6112
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:894:2026-02-11 04:21:29,246 - training - INFO -   val_mae_conscientiousness: 9.7583
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:895:2026-02-11 04:21:29,246 - training - INFO -   val_mae_extraversion: 8.9172
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:896:2026-02-11 04:21:29,246 - training - INFO -   val_mae_agreeableness: 9.0183
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:897:2026-02-11 04:21:29,246 - training - INFO -   val_mae_neuroticism: 9.5379
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:898:2026-02-11 04:21:29,246 - training - INFO -   val_mae_mean: 9.1686
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:899:2026-02-11 04:21:29,246 - training - INFO -   val_mae_std: 0.4197
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:900:2026-02-11 04:21:29,246 - training - INFO -   val_corr_openness: -0.0108
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:901:2026-02-11 04:21:29,246 - training - INFO -   val_corr_conscientiousness: -0.0160
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:902:2026-02-11 04:21:29,246 - training - INFO -   val_corr_extraversion: -0.0146
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:903:2026-02-11 04:21:29,247 - training - INFO -   val_corr_agreeableness: 0.0601
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:904:2026-02-11 04:21:29,247 - training - INFO -   val_corr_neuroticism: 0.0115
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:905:2026-02-11 04:21:29,247 - training - INFO -   val_corr_mean: 0.0060
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:906:2026-02-11 04:21:29,247 - training - INFO -   val_deception_accuracy: 0.5512
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:907:2026-02-11 04:21:29,247 - training - INFO -   val_deception_balanced_accuracy: 0.5000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:908:2026-02-11 04:21:29,247 - training - INFO -   val_deception_precision: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:909:2026-02-11 04:21:29,247 - training - INFO -   val_deception_recall: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:910:2026-02-11 04:21:29,247 - training - INFO -   val_deception_f1: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:911:2026-02-11 04:21:29,247 - training - INFO -   val_deception_tn: 183.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:912:2026-02-11 04:21:29,247 - training - INFO -   val_deception_fp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:913:2026-02-11 04:21:29,247 - training - INFO -   val_deception_fn: 149.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:914:2026-02-11 04:21:29,247 - training - INFO -   val_deception_tp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:915:2026-02-11 04:21:29,247 - training - INFO -   val_loss: 27.4679
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:916:2026-02-11 04:21:29,247 - training - INFO - Completed validation for epoch 15
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:918:2026-02-11 04:21:29,247 - training - INFO - No improvement for 6/10 epochs (monitor=corr_mean). corr_mean did not improve (best=0.0115, current=0.0060)
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:919:2026-02-11 04:21:30,601 - training - INFO - Saved periodic checkpoint at epoch 15
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:920:2026-02-11 04:21:30,602 - training - INFO - Epoch 15 completed successfully
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:922:2026-02-11 04:21:30,602 - training - INFO - Starting Epoch 16/36
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:924:2026-02-11 04:21:30,602 - training - INFO - Training epoch 16...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:926:Epoch 16 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:950:2026-02-11 04:23:19,864 - training - INFO - Completed training for epoch 16
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:951:2026-02-11 04:23:19,864 - training - INFO - Validating epoch 16...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:953:Epoch 16 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:954:2026-02-11 04:23:27,790 - training - INFO -   val_mae_openness: 8.5208
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:955:2026-02-11 04:23:27,790 - training - INFO -   val_mae_conscientiousness: 9.6639
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:956:2026-02-11 04:23:27,790 - training - INFO -   val_mae_extraversion: 8.9218
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:957:2026-02-11 04:23:27,790 - training - INFO -   val_mae_agreeableness: 8.9317
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:958:2026-02-11 04:23:27,790 - training - INFO -   val_mae_neuroticism: 9.1863
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:959:2026-02-11 04:23:27,790 - training - INFO -   val_mae_mean: 9.0449
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:960:2026-02-11 04:23:27,790 - training - INFO -   val_mae_std: 0.3757
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:961:2026-02-11 04:23:27,790 - training - INFO -   val_corr_openness: 0.0075
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:962:2026-02-11 04:23:27,790 - training - INFO -   val_corr_conscientiousness: -0.0217
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:963:2026-02-11 04:23:27,790 - training - INFO -   val_corr_extraversion: -0.0179
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:964:2026-02-11 04:23:27,790 - training - INFO -   val_corr_agreeableness: 0.0656
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:965:2026-02-11 04:23:27,790 - training - INFO -   val_corr_neuroticism: 0.0217
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:966:2026-02-11 04:23:27,790 - training - INFO -   val_corr_mean: 0.0110
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:967:2026-02-11 04:23:27,790 - training - INFO -   val_deception_accuracy: 0.5512
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:968:2026-02-11 04:23:27,790 - training - INFO -   val_deception_balanced_accuracy: 0.5000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:969:2026-02-11 04:23:27,790 - training - INFO -   val_deception_precision: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:970:2026-02-11 04:23:27,790 - training - INFO -   val_deception_recall: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:971:2026-02-11 04:23:27,790 - training - INFO -   val_deception_f1: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:972:2026-02-11 04:23:27,790 - training - INFO -   val_deception_tn: 183.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:973:2026-02-11 04:23:27,790 - training - INFO -   val_deception_fp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:974:2026-02-11 04:23:27,790 - training - INFO -   val_deception_fn: 149.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:975:2026-02-11 04:23:27,790 - training - INFO -   val_deception_tp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:976:2026-02-11 04:23:27,790 - training - INFO -   val_loss: 27.1025
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:977:2026-02-11 04:23:27,791 - training - INFO - Completed validation for epoch 16
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:979:2026-02-11 04:23:27,791 - training - INFO - No improvement for 7/10 epochs (monitor=corr_mean). corr_mean did not improve (best=0.0115, current=0.0110)
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:980:2026-02-11 04:23:27,791 - training - INFO - Epoch 16 completed successfully
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:982:2026-02-11 04:23:27,791 - training - INFO - Starting Epoch 17/36
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:984:2026-02-11 04:23:27,791 - training - INFO - Training epoch 17...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:986:Epoch 17 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1010:2026-02-11 04:25:16,342 - training - INFO - Completed training for epoch 17
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1011:2026-02-11 04:25:16,342 - training - INFO - Validating epoch 17...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1013:Epoch 17 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1014:2026-02-11 04:25:24,214 - training - INFO -   val_mae_openness: 8.9125
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1015:2026-02-11 04:25:24,214 - training - INFO -   val_mae_conscientiousness: 9.8182
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1016:2026-02-11 04:25:24,214 - training - INFO -   val_mae_extraversion: 9.1870
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1017:2026-02-11 04:25:24,214 - training - INFO -   val_mae_agreeableness: 9.4120
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1018:2026-02-11 04:25:24,214 - training - INFO -   val_mae_neuroticism: 9.6544
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1019:2026-02-11 04:25:24,214 - training - INFO -   val_mae_mean: 9.3968
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1020:2026-02-11 04:25:24,214 - training - INFO -   val_mae_std: 0.3233
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1021:2026-02-11 04:25:24,214 - training - INFO -   val_corr_openness: -0.0176
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1022:2026-02-11 04:25:24,214 - training - INFO -   val_corr_conscientiousness: 0.0077
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1023:2026-02-11 04:25:24,214 - training - INFO -   val_corr_extraversion: -0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1024:2026-02-11 04:25:24,214 - training - INFO -   val_corr_agreeableness: 0.0484
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1025:2026-02-11 04:25:24,214 - training - INFO -   val_corr_neuroticism: -0.0066
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1026:2026-02-11 04:25:24,214 - training - INFO -   val_corr_mean: 0.0064
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1027:2026-02-11 04:25:24,214 - training - INFO -   val_deception_accuracy: 0.5512
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1028:2026-02-11 04:25:24,214 - training - INFO -   val_deception_balanced_accuracy: 0.5000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1029:2026-02-11 04:25:24,214 - training - INFO -   val_deception_precision: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1030:2026-02-11 04:25:24,214 - training - INFO -   val_deception_recall: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1031:2026-02-11 04:25:24,214 - training - INFO -   val_deception_f1: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1032:2026-02-11 04:25:24,214 - training - INFO -   val_deception_tn: 183.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1033:2026-02-11 04:25:24,214 - training - INFO -   val_deception_fp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1034:2026-02-11 04:25:24,214 - training - INFO -   val_deception_fn: 149.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1035:2026-02-11 04:25:24,214 - training - INFO -   val_deception_tp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1036:2026-02-11 04:25:24,214 - training - INFO -   val_loss: 28.1378
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1037:2026-02-11 04:25:24,214 - training - INFO - Completed validation for epoch 17
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1039:2026-02-11 04:25:24,215 - training - INFO - No improvement for 8/10 epochs (monitor=corr_mean). corr_mean did not improve (best=0.0115, current=0.0064)
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1040:2026-02-11 04:25:24,215 - training - INFO - Epoch 17 completed successfully
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1042:2026-02-11 04:25:24,215 - training - INFO - Starting Epoch 18/36
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1044:2026-02-11 04:25:24,215 - training - INFO - Training epoch 18...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1046:Epoch 18 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1070:2026-02-11 04:27:12,167 - training - INFO - Completed training for epoch 18
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1071:2026-02-11 04:27:12,167 - training - INFO - Validating epoch 18...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1073:Epoch 18 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1074:2026-02-11 04:27:20,047 - training - INFO -   val_mae_openness: 8.5442
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1075:2026-02-11 04:27:20,047 - training - INFO -   val_mae_conscientiousness: 9.6317
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1076:2026-02-11 04:27:20,047 - training - INFO -   val_mae_extraversion: 8.8789
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1077:2026-02-11 04:27:20,047 - training - INFO -   val_mae_agreeableness: 8.9337
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1078:2026-02-11 04:27:20,047 - training - INFO -   val_mae_neuroticism: 9.3306
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1079:2026-02-11 04:27:20,047 - training - INFO -   val_mae_mean: 9.0638
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1080:2026-02-11 04:27:20,047 - training - INFO -   val_mae_std: 0.3781
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1081:2026-02-11 04:27:20,047 - training - INFO -   val_corr_openness: -0.0034
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1082:2026-02-11 04:27:20,047 - training - INFO -   val_corr_conscientiousness: -0.0170
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1083:2026-02-11 04:27:20,048 - training - INFO -   val_corr_extraversion: -0.0118
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1084:2026-02-11 04:27:20,048 - training - INFO -   val_corr_agreeableness: 0.0646
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1085:2026-02-11 04:27:20,048 - training - INFO -   val_corr_neuroticism: 0.0191
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1086:2026-02-11 04:27:20,048 - training - INFO -   val_corr_mean: 0.0103
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1087:2026-02-11 04:27:20,048 - training - INFO -   val_deception_accuracy: 0.5512
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1088:2026-02-11 04:27:20,048 - training - INFO -   val_deception_balanced_accuracy: 0.5000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1089:2026-02-11 04:27:20,048 - training - INFO -   val_deception_precision: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1090:2026-02-11 04:27:20,048 - training - INFO -   val_deception_recall: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1091:2026-02-11 04:27:20,048 - training - INFO -   val_deception_f1: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1092:2026-02-11 04:27:20,048 - training - INFO -   val_deception_tn: 183.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1093:2026-02-11 04:27:20,048 - training - INFO -   val_deception_fp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1094:2026-02-11 04:27:20,048 - training - INFO -   val_deception_fn: 149.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1095:2026-02-11 04:27:20,048 - training - INFO -   val_deception_tp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1096:2026-02-11 04:27:20,048 - training - INFO -   val_loss: 27.1530
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1097:2026-02-11 04:27:20,048 - training - INFO - Completed validation for epoch 18
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1099:2026-02-11 04:27:20,048 - training - INFO - No improvement for 9/10 epochs (monitor=corr_mean). corr_mean did not improve (best=0.0115, current=0.0103)
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1100:2026-02-11 04:27:20,048 - training - INFO - Epoch 18 completed successfully
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1102:2026-02-11 04:27:20,048 - training - INFO - Starting Epoch 19/36
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1104:2026-02-11 04:27:20,048 - training - INFO - Training epoch 19...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1106:Epoch 19 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1130:2026-02-11 04:29:08,124 - training - INFO - Completed training for epoch 19
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1131:2026-02-11 04:29:08,124 - training - INFO - Validating epoch 19...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1133:Epoch 19 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1134:2026-02-11 04:29:15,992 - training - INFO -   val_mae_openness: 8.5846
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1135:2026-02-11 04:29:15,992 - training - INFO -   val_mae_conscientiousness: 9.6417
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1136:2026-02-11 04:29:15,992 - training - INFO -   val_mae_extraversion: 8.8929
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1137:2026-02-11 04:29:15,992 - training - INFO -   val_mae_agreeableness: 8.9296
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1138:2026-02-11 04:29:15,992 - training - INFO -   val_mae_neuroticism: 9.1953
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1139:2026-02-11 04:29:15,992 - training - INFO -   val_mae_mean: 9.0488
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1140:2026-02-11 04:29:15,992 - training - INFO -   val_mae_std: 0.3541
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1141:2026-02-11 04:29:15,992 - training - INFO -   val_corr_openness: 0.0071
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1142:2026-02-11 04:29:15,992 - training - INFO -   val_corr_conscientiousness: -0.0202
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1143:2026-02-11 04:29:15,992 - training - INFO -   val_corr_extraversion: -0.0159
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1144:2026-02-11 04:29:15,992 - training - INFO -   val_corr_agreeableness: 0.0668
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1145:2026-02-11 04:29:15,992 - training - INFO -   val_corr_neuroticism: 0.0222
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1146:2026-02-11 04:29:15,992 - training - INFO -   val_corr_mean: 0.0120
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1147:2026-02-11 04:29:15,992 - training - INFO -   val_deception_accuracy: 0.5512
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1148:2026-02-11 04:29:15,992 - training - INFO -   val_deception_balanced_accuracy: 0.5000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1149:2026-02-11 04:29:15,992 - training - INFO -   val_deception_precision: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1150:2026-02-11 04:29:15,992 - training - INFO -   val_deception_recall: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1151:2026-02-11 04:29:15,992 - training - INFO -   val_deception_f1: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1152:2026-02-11 04:29:15,992 - training - INFO -   val_deception_tn: 183.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1153:2026-02-11 04:29:15,992 - training - INFO -   val_deception_fp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1154:2026-02-11 04:29:15,992 - training - INFO -   val_deception_fn: 149.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1155:2026-02-11 04:29:15,992 - training - INFO -   val_deception_tp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1156:2026-02-11 04:29:15,993 - training - INFO -   val_loss: 27.1160
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1157:2026-02-11 04:29:15,993 - training - INFO - Completed validation for epoch 19
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1159:2026-02-11 04:29:17,299 - training - INFO - Saved best model at epoch 19 (corr_mean improved: 0.0115 -> 0.0120)
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1160:2026-02-11 04:29:17,299 - training - INFO - Epoch 19 completed successfully
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1162:2026-02-11 04:29:17,299 - training - INFO - Starting Epoch 20/36
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1164:2026-02-11 04:29:17,300 - training - INFO - Training epoch 20...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1166:Epoch 20 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1190:2026-02-11 04:31:06,243 - training - INFO - Completed training for epoch 20
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1191:2026-02-11 04:31:06,243 - training - INFO - Validating epoch 20...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1193:Epoch 20 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1194:2026-02-11 04:31:14,154 - training - INFO -   val_mae_openness: 8.6328
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1195:2026-02-11 04:31:14,154 - training - INFO -   val_mae_conscientiousness: 9.6282
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1196:2026-02-11 04:31:14,154 - training - INFO -   val_mae_extraversion: 8.9762
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1197:2026-02-11 04:31:14,154 - training - INFO -   val_mae_agreeableness: 8.9479
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1198:2026-02-11 04:31:14,154 - training - INFO -   val_mae_neuroticism: 9.4115
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1199:2026-02-11 04:31:14,154 - training - INFO -   val_mae_mean: 9.1193
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1200:2026-02-11 04:31:14,154 - training - INFO -   val_mae_std: 0.3552
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1201:2026-02-11 04:31:14,154 - training - INFO -   val_corr_openness: 0.0071
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1202:2026-02-11 04:31:14,154 - training - INFO -   val_corr_conscientiousness: -0.0225
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1203:2026-02-11 04:31:14,154 - training - INFO -   val_corr_extraversion: -0.0184
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1204:2026-02-11 04:31:14,154 - training - INFO -   val_corr_agreeableness: 0.0658
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1205:2026-02-11 04:31:14,154 - training - INFO -   val_corr_neuroticism: 0.0220
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1206:2026-02-11 04:31:14,154 - training - INFO -   val_corr_mean: 0.0108
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1207:2026-02-11 04:31:14,154 - training - INFO -   val_deception_accuracy: 0.5512
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1208:2026-02-11 04:31:14,154 - training - INFO -   val_deception_balanced_accuracy: 0.5000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1209:2026-02-11 04:31:14,154 - training - INFO -   val_deception_precision: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1210:2026-02-11 04:31:14,154 - training - INFO -   val_deception_recall: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1211:2026-02-11 04:31:14,155 - training - INFO -   val_deception_f1: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1212:2026-02-11 04:31:14,155 - training - INFO -   val_deception_tn: 183.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1213:2026-02-11 04:31:14,155 - training - INFO -   val_deception_fp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1214:2026-02-11 04:31:14,155 - training - INFO -   val_deception_fn: 149.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1215:2026-02-11 04:31:14,155 - training - INFO -   val_deception_tp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1216:2026-02-11 04:31:14,155 - training - INFO -   val_loss: 27.3305
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1217:2026-02-11 04:31:14,155 - training - INFO - Completed validation for epoch 20
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1219:2026-02-11 04:31:14,155 - training - INFO - No improvement for 1/10 epochs (monitor=corr_mean). corr_mean did not improve (best=0.0120, current=0.0108)
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1220:2026-02-11 04:31:15,490 - training - INFO - Saved periodic checkpoint at epoch 20
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1221:2026-02-11 04:31:15,490 - training - INFO - Epoch 20 completed successfully
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1223:2026-02-11 04:31:15,490 - training - INFO - Starting Epoch 21/36
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1225:2026-02-11 04:31:15,490 - training - INFO - Training epoch 21...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1227:Epoch 21 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1251:2026-02-11 04:33:04,708 - training - INFO - Completed training for epoch 21
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1252:2026-02-11 04:33:04,708 - training - INFO - Validating epoch 21...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1254:Epoch 21 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1255:2026-02-11 04:33:12,630 - training - INFO -   val_mae_openness: 8.6513
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1256:2026-02-11 04:33:12,630 - training - INFO -   val_mae_conscientiousness: 9.6419
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1257:2026-02-11 04:33:12,630 - training - INFO -   val_mae_extraversion: 9.1328
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1258:2026-02-11 04:33:12,630 - training - INFO -   val_mae_agreeableness: 8.9533
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1259:2026-02-11 04:33:12,630 - training - INFO -   val_mae_neuroticism: 9.4356
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1260:2026-02-11 04:33:12,630 - training - INFO -   val_mae_mean: 9.1630
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1261:2026-02-11 04:33:12,630 - training - INFO -   val_mae_std: 0.3494
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1262:2026-02-11 04:33:12,631 - training - INFO -   val_corr_openness: 0.0077
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1263:2026-02-11 04:33:12,631 - training - INFO -   val_corr_conscientiousness: -0.0227
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1264:2026-02-11 04:33:12,631 - training - INFO -   val_corr_extraversion: -0.0178
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1265:2026-02-11 04:33:12,631 - training - INFO -   val_corr_agreeableness: 0.0661
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1266:2026-02-11 04:33:12,631 - training - INFO -   val_corr_neuroticism: 0.0224
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1267:2026-02-11 04:33:12,631 - training - INFO -   val_corr_mean: 0.0111
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1268:2026-02-11 04:33:12,631 - training - INFO -   val_deception_accuracy: 0.5512
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1269:2026-02-11 04:33:12,631 - training - INFO -   val_deception_balanced_accuracy: 0.5000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1270:2026-02-11 04:33:12,631 - training - INFO -   val_deception_precision: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1271:2026-02-11 04:33:12,631 - training - INFO -   val_deception_recall: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1272:2026-02-11 04:33:12,631 - training - INFO -   val_deception_f1: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1273:2026-02-11 04:33:12,631 - training - INFO -   val_deception_tn: 183.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1274:2026-02-11 04:33:12,631 - training - INFO -   val_deception_fp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1275:2026-02-11 04:33:12,631 - training - INFO -   val_deception_fn: 149.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1276:2026-02-11 04:33:12,631 - training - INFO -   val_deception_tp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1277:2026-02-11 04:33:12,631 - training - INFO -   val_loss: 27.4666
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1278:2026-02-11 04:33:12,631 - training - INFO - Completed validation for epoch 21
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1280:2026-02-11 04:33:12,631 - training - INFO - No improvement for 2/10 epochs (monitor=corr_mean). corr_mean did not improve (best=0.0120, current=0.0111)
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1281:2026-02-11 04:33:12,631 - training - INFO - Epoch 21 completed successfully
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1283:2026-02-11 04:33:12,631 - training - INFO - Starting Epoch 22/36
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1285:2026-02-11 04:33:12,632 - training - INFO - Training epoch 22...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1287:Epoch 22 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1311:2026-02-11 04:35:00,863 - training - INFO - Completed training for epoch 22
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1312:2026-02-11 04:35:00,863 - training - INFO - Validating epoch 22...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1314:Epoch 22 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1315:2026-02-11 04:35:08,728 - training - INFO -   val_mae_openness: 8.7290
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1316:2026-02-11 04:35:08,728 - training - INFO -   val_mae_conscientiousness: 9.6365
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1317:2026-02-11 04:35:08,728 - training - INFO -   val_mae_extraversion: 9.0758
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1318:2026-02-11 04:35:08,728 - training - INFO -   val_mae_agreeableness: 8.9662
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1319:2026-02-11 04:35:08,728 - training - INFO -   val_mae_neuroticism: 9.4717
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1320:2026-02-11 04:35:08,728 - training - INFO -   val_mae_mean: 9.1759
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1321:2026-02-11 04:35:08,728 - training - INFO -   val_mae_std: 0.3327
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1322:2026-02-11 04:35:08,728 - training - INFO -   val_corr_openness: 0.0078
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1323:2026-02-11 04:35:08,728 - training - INFO -   val_corr_conscientiousness: -0.0227
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1324:2026-02-11 04:35:08,728 - training - INFO -   val_corr_extraversion: -0.0181
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1325:2026-02-11 04:35:08,728 - training - INFO -   val_corr_agreeableness: 0.0661
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1326:2026-02-11 04:35:08,728 - training - INFO -   val_corr_neuroticism: 0.0223
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1327:2026-02-11 04:35:08,728 - training - INFO -   val_corr_mean: 0.0110
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1328:2026-02-11 04:35:08,728 - training - INFO -   val_deception_accuracy: 0.5512
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1329:2026-02-11 04:35:08,728 - training - INFO -   val_deception_balanced_accuracy: 0.5000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1330:2026-02-11 04:35:08,728 - training - INFO -   val_deception_precision: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1331:2026-02-11 04:35:08,728 - training - INFO -   val_deception_recall: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1332:2026-02-11 04:35:08,728 - training - INFO -   val_deception_f1: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1333:2026-02-11 04:35:08,728 - training - INFO -   val_deception_tn: 183.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1334:2026-02-11 04:35:08,728 - training - INFO -   val_deception_fp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1335:2026-02-11 04:35:08,728 - training - INFO -   val_deception_fn: 149.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1336:2026-02-11 04:35:08,728 - training - INFO -   val_deception_tp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1337:2026-02-11 04:35:08,728 - training - INFO -   val_loss: 27.5047
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1338:2026-02-11 04:35:08,728 - training - INFO - Completed validation for epoch 22
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1340:2026-02-11 04:35:08,729 - training - INFO - No improvement for 3/10 epochs (monitor=corr_mean). corr_mean did not improve (best=0.0120, current=0.0110)
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1341:2026-02-11 04:35:08,729 - training - INFO - Epoch 22 completed successfully
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1343:2026-02-11 04:35:08,729 - training - INFO - Starting Epoch 23/36
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1345:2026-02-11 04:35:08,729 - training - INFO - Training epoch 23...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1347:Epoch 23 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1371:2026-02-11 04:36:56,505 - training - INFO - Completed training for epoch 23
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1372:2026-02-11 04:36:56,505 - training - INFO - Validating epoch 23...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1374:Epoch 23 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1375:2026-02-11 04:37:04,378 - training - INFO -   val_mae_openness: 8.5678
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1376:2026-02-11 04:37:04,378 - training - INFO -   val_mae_conscientiousness: 9.6181
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1377:2026-02-11 04:37:04,378 - training - INFO -   val_mae_extraversion: 9.0858
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1378:2026-02-11 04:37:04,378 - training - INFO -   val_mae_agreeableness: 8.9740
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1379:2026-02-11 04:37:04,378 - training - INFO -   val_mae_neuroticism: 9.5848
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1380:2026-02-11 04:37:04,378 - training - INFO -   val_mae_mean: 9.1661
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1381:2026-02-11 04:37:04,378 - training - INFO -   val_mae_std: 0.3952
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1382:2026-02-11 04:37:04,378 - training - INFO -   val_corr_openness: 0.0076
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1383:2026-02-11 04:37:04,378 - training - INFO -   val_corr_conscientiousness: -0.0228
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1384:2026-02-11 04:37:04,378 - training - INFO -   val_corr_extraversion: -0.0177
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1385:2026-02-11 04:37:04,378 - training - INFO -   val_corr_agreeableness: 0.0661
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1386:2026-02-11 04:37:04,378 - training - INFO -   val_corr_neuroticism: 0.0223
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1387:2026-02-11 04:37:04,378 - training - INFO -   val_corr_mean: 0.0111
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1388:2026-02-11 04:37:04,378 - training - INFO -   val_deception_accuracy: 0.5512
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1389:2026-02-11 04:37:04,378 - training - INFO -   val_deception_balanced_accuracy: 0.5000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1390:2026-02-11 04:37:04,378 - training - INFO -   val_deception_precision: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1391:2026-02-11 04:37:04,378 - training - INFO -   val_deception_recall: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1392:2026-02-11 04:37:04,378 - training - INFO -   val_deception_f1: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1393:2026-02-11 04:37:04,378 - training - INFO -   val_deception_tn: 183.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1394:2026-02-11 04:37:04,378 - training - INFO -   val_deception_fp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1395:2026-02-11 04:37:04,378 - training - INFO -   val_deception_fn: 149.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1396:2026-02-11 04:37:04,378 - training - INFO -   val_deception_tp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1397:2026-02-11 04:37:04,378 - training - INFO -   val_loss: 27.4736
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1398:2026-02-11 04:37:04,378 - training - INFO - Completed validation for epoch 23
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1400:2026-02-11 04:37:04,379 - training - INFO - No improvement for 4/10 epochs (monitor=corr_mean). corr_mean did not improve (best=0.0120, current=0.0111)
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1401:2026-02-11 04:37:04,379 - training - INFO - Epoch 23 completed successfully
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1403:2026-02-11 04:37:04,379 - training - INFO - Starting Epoch 24/36
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1405:2026-02-11 04:37:04,379 - training - INFO - Training epoch 24...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1407:Epoch 24 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1431:2026-02-11 04:38:52,869 - training - INFO - Completed training for epoch 24
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1432:2026-02-11 04:38:52,869 - training - INFO - Validating epoch 24...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1434:Epoch 24 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1435:2026-02-11 04:39:00,752 - training - INFO -   val_mae_openness: 8.6541
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1436:2026-02-11 04:39:00,752 - training - INFO -   val_mae_conscientiousness: 9.6155
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1437:2026-02-11 04:39:00,752 - training - INFO -   val_mae_extraversion: 9.1818
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1438:2026-02-11 04:39:00,752 - training - INFO -   val_mae_agreeableness: 9.0294
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1439:2026-02-11 04:39:00,752 - training - INFO -   val_mae_neuroticism: 9.5782
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1440:2026-02-11 04:39:00,752 - training - INFO -   val_mae_mean: 9.2118
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1441:2026-02-11 04:39:00,752 - training - INFO -   val_mae_std: 0.3584
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1442:2026-02-11 04:39:00,752 - training - INFO -   val_corr_openness: 0.0080
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1443:2026-02-11 04:39:00,752 - training - INFO -   val_corr_conscientiousness: -0.0227
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1444:2026-02-11 04:39:00,752 - training - INFO -   val_corr_extraversion: -0.0178
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1445:2026-02-11 04:39:00,752 - training - INFO -   val_corr_agreeableness: 0.0662
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1446:2026-02-11 04:39:00,752 - training - INFO -   val_corr_neuroticism: 0.0228
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1447:2026-02-11 04:39:00,753 - training - INFO -   val_corr_mean: 0.0113
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1448:2026-02-11 04:39:00,753 - training - INFO -   val_deception_accuracy: 0.5512
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1449:2026-02-11 04:39:00,753 - training - INFO -   val_deception_balanced_accuracy: 0.5000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1450:2026-02-11 04:39:00,753 - training - INFO -   val_deception_precision: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1451:2026-02-11 04:39:00,753 - training - INFO -   val_deception_recall: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1452:2026-02-11 04:39:00,753 - training - INFO -   val_deception_f1: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1453:2026-02-11 04:39:00,753 - training - INFO -   val_deception_tn: 183.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1454:2026-02-11 04:39:00,753 - training - INFO -   val_deception_fp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1455:2026-02-11 04:39:00,753 - training - INFO -   val_deception_fn: 149.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1456:2026-02-11 04:39:00,753 - training - INFO -   val_deception_tp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1457:2026-02-11 04:39:00,753 - training - INFO -   val_loss: 27.6088
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1458:2026-02-11 04:39:00,753 - training - INFO - Completed validation for epoch 24
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1460:2026-02-11 04:39:00,753 - training - INFO - No improvement for 5/10 epochs (monitor=corr_mean). corr_mean did not improve (best=0.0120, current=0.0113)
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1461:2026-02-11 04:39:00,753 - training - INFO - Epoch 24 completed successfully
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1463:2026-02-11 04:39:00,753 - training - INFO - Starting Epoch 25/36
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1465:2026-02-11 04:39:00,753 - training - INFO - Training epoch 25...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1467:Epoch 25 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1491:2026-02-11 04:40:49,686 - training - INFO - Completed training for epoch 25
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1492:2026-02-11 04:40:49,686 - training - INFO - Validating epoch 25...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1494:Epoch 25 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1495:2026-02-11 04:40:57,561 - training - INFO -   val_mae_openness: 8.7635
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1496:2026-02-11 04:40:57,561 - training - INFO -   val_mae_conscientiousness: 9.6173
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1497:2026-02-11 04:40:57,561 - training - INFO -   val_mae_extraversion: 8.9694
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1498:2026-02-11 04:40:57,561 - training - INFO -   val_mae_agreeableness: 9.0453
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1499:2026-02-11 04:40:57,561 - training - INFO -   val_mae_neuroticism: 9.6331
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1500:2026-02-11 04:40:57,561 - training - INFO -   val_mae_mean: 9.2057
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1501:2026-02-11 04:40:57,561 - training - INFO -   val_mae_std: 0.3547
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1502:2026-02-11 04:40:57,561 - training - INFO -   val_corr_openness: 0.0081
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1503:2026-02-11 04:40:57,561 - training - INFO -   val_corr_conscientiousness: -0.0225
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1504:2026-02-11 04:40:57,561 - training - INFO -   val_corr_extraversion: -0.0177
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1505:2026-02-11 04:40:57,561 - training - INFO -   val_corr_agreeableness: 0.0663
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1506:2026-02-11 04:40:57,561 - training - INFO -   val_corr_neuroticism: 0.0225
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1507:2026-02-11 04:40:57,561 - training - INFO -   val_corr_mean: 0.0113
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1508:2026-02-11 04:40:57,561 - training - INFO -   val_deception_accuracy: 0.5512
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1509:2026-02-11 04:40:57,561 - training - INFO -   val_deception_balanced_accuracy: 0.5000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1510:2026-02-11 04:40:57,561 - training - INFO -   val_deception_precision: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1511:2026-02-11 04:40:57,561 - training - INFO -   val_deception_recall: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1512:2026-02-11 04:40:57,561 - training - INFO -   val_deception_f1: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1513:2026-02-11 04:40:57,561 - training - INFO -   val_deception_tn: 183.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1514:2026-02-11 04:40:57,561 - training - INFO -   val_deception_fp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1515:2026-02-11 04:40:57,562 - training - INFO -   val_deception_fn: 149.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1516:2026-02-11 04:40:57,562 - training - INFO -   val_deception_tp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1517:2026-02-11 04:40:57,562 - training - INFO -   val_loss: 27.5854
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1518:2026-02-11 04:40:57,562 - training - INFO - Completed validation for epoch 25
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1520:2026-02-11 04:40:57,562 - training - INFO - No improvement for 6/10 epochs (monitor=corr_mean). corr_mean did not improve (best=0.0120, current=0.0113)
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1521:2026-02-11 04:40:58,879 - training - INFO - Saved periodic checkpoint at epoch 25
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1522:2026-02-11 04:40:58,879 - training - INFO - Epoch 25 completed successfully
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1524:2026-02-11 04:40:58,879 - training - INFO - Starting Epoch 26/36
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1526:2026-02-11 04:40:58,879 - training - INFO - Training epoch 26...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1528:Epoch 26 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1552:2026-02-11 04:42:47,958 - training - INFO - Completed training for epoch 26
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1553:2026-02-11 04:42:47,958 - training - INFO - Validating epoch 26...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1555:Epoch 26 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1556:2026-02-11 04:42:55,858 - training - INFO -   val_mae_openness: 8.6623
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1557:2026-02-11 04:42:55,858 - training - INFO -   val_mae_conscientiousness: 9.6199
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1558:2026-02-11 04:42:55,858 - training - INFO -   val_mae_extraversion: 9.1423
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1559:2026-02-11 04:42:55,858 - training - INFO -   val_mae_agreeableness: 9.0968
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1560:2026-02-11 04:42:55,858 - training - INFO -   val_mae_neuroticism: 9.7039
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1561:2026-02-11 04:42:55,858 - training - INFO -   val_mae_mean: 9.2450
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1562:2026-02-11 04:42:55,858 - training - INFO -   val_mae_std: 0.3803
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1563:2026-02-11 04:42:55,858 - training - INFO -   val_corr_openness: 0.0076
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1564:2026-02-11 04:42:55,858 - training - INFO -   val_corr_conscientiousness: -0.0228
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1565:2026-02-11 04:42:55,858 - training - INFO -   val_corr_extraversion: -0.0178
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1566:2026-02-11 04:42:55,858 - training - INFO -   val_corr_agreeableness: 0.0662
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1567:2026-02-11 04:42:55,858 - training - INFO -   val_corr_neuroticism: 0.0224
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1568:2026-02-11 04:42:55,858 - training - INFO -   val_corr_mean: 0.0111
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1569:2026-02-11 04:42:55,858 - training - INFO -   val_deception_accuracy: 0.5512
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1570:2026-02-11 04:42:55,858 - training - INFO -   val_deception_balanced_accuracy: 0.5000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1571:2026-02-11 04:42:55,858 - training - INFO -   val_deception_precision: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1572:2026-02-11 04:42:55,858 - training - INFO -   val_deception_recall: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1573:2026-02-11 04:42:55,858 - training - INFO -   val_deception_f1: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1574:2026-02-11 04:42:55,858 - training - INFO -   val_deception_tn: 183.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1575:2026-02-11 04:42:55,858 - training - INFO -   val_deception_fp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1576:2026-02-11 04:42:55,858 - training - INFO -   val_deception_fn: 149.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1577:2026-02-11 04:42:55,858 - training - INFO -   val_deception_tp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1578:2026-02-11 04:42:55,858 - training - INFO -   val_loss: 27.7059
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1579:2026-02-11 04:42:55,858 - training - INFO - Completed validation for epoch 26
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1581:2026-02-11 04:42:55,859 - training - INFO - No improvement for 7/10 epochs (monitor=corr_mean). corr_mean did not improve (best=0.0120, current=0.0111)
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1582:2026-02-11 04:42:55,859 - training - INFO - Epoch 26 completed successfully
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1584:2026-02-11 04:42:55,859 - training - INFO - Starting Epoch 27/36
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1586:2026-02-11 04:42:55,859 - training - INFO - Training epoch 27...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1588:Epoch 27 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1612:2026-02-11 04:44:44,586 - training - INFO - Completed training for epoch 27
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1613:2026-02-11 04:44:44,586 - training - INFO - Validating epoch 27...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1615:Epoch 27 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1616:2026-02-11 04:44:52,438 - training - INFO -   val_mae_openness: 8.6343
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1617:2026-02-11 04:44:52,438 - training - INFO -   val_mae_conscientiousness: 9.6271
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1618:2026-02-11 04:44:52,438 - training - INFO -   val_mae_extraversion: 9.1382
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1619:2026-02-11 04:44:52,438 - training - INFO -   val_mae_agreeableness: 9.0819
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1620:2026-02-11 04:44:52,438 - training - INFO -   val_mae_neuroticism: 9.7657
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1621:2026-02-11 04:44:52,438 - training - INFO -   val_mae_mean: 9.2494
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1622:2026-02-11 04:44:52,438 - training - INFO -   val_mae_std: 0.4070
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1623:2026-02-11 04:44:52,439 - training - INFO -   val_corr_openness: 0.0086
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1624:2026-02-11 04:44:52,439 - training - INFO -   val_corr_conscientiousness: -0.0228
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1625:2026-02-11 04:44:52,439 - training - INFO -   val_corr_extraversion: -0.0175
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1626:2026-02-11 04:44:52,439 - training - INFO -   val_corr_agreeableness: 0.0666
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1627:2026-02-11 04:44:52,439 - training - INFO -   val_corr_neuroticism: 0.0232
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1628:2026-02-11 04:44:52,439 - training - INFO -   val_corr_mean: 0.0116
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1629:2026-02-11 04:44:52,439 - training - INFO -   val_deception_accuracy: 0.5512
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1630:2026-02-11 04:44:52,439 - training - INFO -   val_deception_balanced_accuracy: 0.5000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1631:2026-02-11 04:44:52,439 - training - INFO -   val_deception_precision: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1632:2026-02-11 04:44:52,439 - training - INFO -   val_deception_recall: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1633:2026-02-11 04:44:52,439 - training - INFO -   val_deception_f1: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1634:2026-02-11 04:44:52,439 - training - INFO -   val_deception_tn: 183.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1635:2026-02-11 04:44:52,439 - training - INFO -   val_deception_fp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1636:2026-02-11 04:44:52,439 - training - INFO -   val_deception_fn: 149.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1637:2026-02-11 04:44:52,439 - training - INFO -   val_deception_tp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1638:2026-02-11 04:44:52,439 - training - INFO -   val_loss: 27.7169
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1639:2026-02-11 04:44:52,439 - training - INFO - Completed validation for epoch 27
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1641:2026-02-11 04:44:52,439 - training - INFO - No improvement for 8/10 epochs (monitor=corr_mean). corr_mean did not improve (best=0.0120, current=0.0116)
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1642:2026-02-11 04:44:52,439 - training - INFO - Epoch 27 completed successfully
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1644:2026-02-11 04:44:52,439 - training - INFO - Starting Epoch 28/36
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1646:2026-02-11 04:44:52,440 - training - INFO - Training epoch 28...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1648:Epoch 28 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1672:2026-02-11 04:46:40,207 - training - INFO - Completed training for epoch 28
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1673:2026-02-11 04:46:40,207 - training - INFO - Validating epoch 28...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1675:Epoch 28 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1676:2026-02-11 04:46:48,092 - training - INFO -   val_mae_openness: 8.7378
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1677:2026-02-11 04:46:48,092 - training - INFO -   val_mae_conscientiousness: 9.6225
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1678:2026-02-11 04:46:48,092 - training - INFO -   val_mae_extraversion: 9.1612
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1679:2026-02-11 04:46:48,092 - training - INFO -   val_mae_agreeableness: 9.1059
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1680:2026-02-11 04:46:48,092 - training - INFO -   val_mae_neuroticism: 9.7921
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1681:2026-02-11 04:46:48,092 - training - INFO -   val_mae_mean: 9.2839
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1682:2026-02-11 04:46:48,092 - training - INFO -   val_mae_std: 0.3789
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1683:2026-02-11 04:46:48,092 - training - INFO -   val_corr_openness: 0.0079
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1684:2026-02-11 04:46:48,092 - training - INFO -   val_corr_conscientiousness: -0.0227
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1685:2026-02-11 04:46:48,092 - training - INFO -   val_corr_extraversion: -0.0177
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1686:2026-02-11 04:46:48,092 - training - INFO -   val_corr_agreeableness: 0.0663
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1687:2026-02-11 04:46:48,092 - training - INFO -   val_corr_neuroticism: 0.0226
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1688:2026-02-11 04:46:48,092 - training - INFO -   val_corr_mean: 0.0113
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1689:2026-02-11 04:46:48,092 - training - INFO -   val_deception_accuracy: 0.5512
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1690:2026-02-11 04:46:48,092 - training - INFO -   val_deception_balanced_accuracy: 0.5000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1691:2026-02-11 04:46:48,092 - training - INFO -   val_deception_precision: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1692:2026-02-11 04:46:48,092 - training - INFO -   val_deception_recall: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1693:2026-02-11 04:46:48,092 - training - INFO -   val_deception_f1: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1694:2026-02-11 04:46:48,092 - training - INFO -   val_deception_tn: 183.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1695:2026-02-11 04:46:48,092 - training - INFO -   val_deception_fp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1696:2026-02-11 04:46:48,092 - training - INFO -   val_deception_fn: 149.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1697:2026-02-11 04:46:48,092 - training - INFO -   val_deception_tp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1698:2026-02-11 04:46:48,092 - training - INFO -   val_loss: 27.8231
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1699:2026-02-11 04:46:48,092 - training - INFO - Completed validation for epoch 28
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1701:2026-02-11 04:46:48,093 - training - INFO - No improvement for 9/10 epochs (monitor=corr_mean). corr_mean did not improve (best=0.0120, current=0.0113)
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1702:2026-02-11 04:46:48,093 - training - INFO - Epoch 28 completed successfully
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1704:2026-02-11 04:46:48,093 - training - INFO - Starting Epoch 29/36
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1706:2026-02-11 04:46:48,093 - training - INFO - Training epoch 29...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1708:Epoch 29 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1732:2026-02-11 04:48:36,204 - training - INFO - Completed training for epoch 29
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1733:2026-02-11 04:48:36,204 - training - INFO - Validating epoch 29...
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1735:Epoch 29 Metrics:
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1736:2026-02-11 04:48:44,051 - training - INFO -   val_mae_openness: 8.7342
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1737:2026-02-11 04:48:44,051 - training - INFO -   val_mae_conscientiousness: 9.6132
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1738:2026-02-11 04:48:44,051 - training - INFO -   val_mae_extraversion: 9.1250
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1739:2026-02-11 04:48:44,051 - training - INFO -   val_mae_agreeableness: 9.1461
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1740:2026-02-11 04:48:44,051 - training - INFO -   val_mae_neuroticism: 9.8234
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1741:2026-02-11 04:48:44,051 - training - INFO -   val_mae_mean: 9.2884
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1742:2026-02-11 04:48:44,051 - training - INFO -   val_mae_std: 0.3862
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1743:2026-02-11 04:48:44,051 - training - INFO -   val_corr_openness: 0.0084
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1744:2026-02-11 04:48:44,051 - training - INFO -   val_corr_conscientiousness: -0.0228
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1745:2026-02-11 04:48:44,051 - training - INFO -   val_corr_extraversion: -0.0175
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1746:2026-02-11 04:48:44,051 - training - INFO -   val_corr_agreeableness: 0.0665
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1747:2026-02-11 04:48:44,051 - training - INFO -   val_corr_neuroticism: 0.0231
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1748:2026-02-11 04:48:44,051 - training - INFO -   val_corr_mean: 0.0115
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1749:2026-02-11 04:48:44,051 - training - INFO -   val_deception_accuracy: 0.5512
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1750:2026-02-11 04:48:44,051 - training - INFO -   val_deception_balanced_accuracy: 0.5000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1751:2026-02-11 04:48:44,051 - training - INFO -   val_deception_precision: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1752:2026-02-11 04:48:44,051 - training - INFO -   val_deception_recall: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1753:2026-02-11 04:48:44,052 - training - INFO -   val_deception_f1: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1754:2026-02-11 04:48:44,052 - training - INFO -   val_deception_tn: 183.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1755:2026-02-11 04:48:44,052 - training - INFO -   val_deception_fp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1756:2026-02-11 04:48:44,052 - training - INFO -   val_deception_fn: 149.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1757:2026-02-11 04:48:44,052 - training - INFO -   val_deception_tp: 0.0000
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1758:2026-02-11 04:48:44,052 - training - INFO -   val_loss: 27.8338
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1759:2026-02-11 04:48:44,052 - training - INFO - Completed validation for epoch 29
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1761:2026-02-11 04:48:44,052 - training - INFO - No improvement for 10/10 epochs (monitor=corr_mean). corr_mean did not improve (best=0.0120, current=0.0115)
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1762:2026-02-11 04:48:44,052 - training - INFO - Epoch 29 completed successfully
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1765:2026-02-11 04:48:44,052 - training - INFO - No improvement in validation loss for 10 epochs
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1766:2026-02-11 04:48:44,052 - training - INFO - Best model was at epoch 19 with validation loss: 27.1160
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1767:2026-02-11 04:48:44,052 - training - INFO - Stopping training at epoch 29
+D:\Code\Grad\multimodal_interview_system_late_fusion\logs\training_20260211_035121.log:1769:2026-02-11 04:48:44,052 - training - INFO - Training completed. Best model at epoch 19 (val_loss: 27.1160)

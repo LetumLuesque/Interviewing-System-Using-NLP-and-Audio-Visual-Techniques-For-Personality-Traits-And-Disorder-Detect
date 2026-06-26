@@ -1,0 +1,7 @@
+Validation Report - finetuning_dataset.jsonl
+==================================================
+Total Records: 1500
+Passed: 1500
+Failed: 0
+
+Result: 100% Quality Pass. Dataset is perfectly consistent.
